@@ -9,11 +9,11 @@
     <script>
       function hideBanner() {
         document.getElementById('banner').style.display = 'none';
-        localStorage.setItem('bannerHidden', 'true');
+        sessionStorage.setItem('bannerHidden', 'true');
       }
 
-      if (localStorage.getItem('bannerHidden') === 'true') {
-        document.getElementById('banner').style.display = 'none';
+      if (sessionStorage.getItem('bannerHidden') === 'true') {
+          document.getElementById('banner').style.display = 'none';
       }
     </script>
   </div>
