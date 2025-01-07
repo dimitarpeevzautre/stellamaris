@@ -1,6 +1,11 @@
 <header class="site-header" role="banner">
   <div id="banner">
     <h3>We have available puppies</h3>
+    <button class="close-button" onclick="document.getElementById('banner').style.display='none'">
+      <svg class="svg-icon">
+        <use xlink:href="{{ '/assets/minima-social-icons.svg#close' | relative_url }}"></use>
+      </svg>
+    </button>
   </div>
 
   <div class="wrapper">
