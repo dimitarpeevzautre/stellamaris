@@ -28,7 +28,15 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 facebook_username: pwdbulgaria
 instagram_username: pwdbulgaria
-header_pages: ["index.html",  "about.markdown"]
+header_pages: 
+  - index.markdown
+  - story.markdown
+  - breed.markdown
+  - dogs.markdown
+  - puppies.markdown
+  - litters.markdown
+  - apply.markdown
+  - contact.markdown
 
 # Build settings
 theme: minima
