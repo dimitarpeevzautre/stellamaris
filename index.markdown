@@ -6,7 +6,7 @@ layout: default
 title: Home
 ---
 
-<div class="hero-image parralax" style="background-image: url('assets/arthy_hero.jpg')">
+<div class="hero-image parralax" style="background-image: url('assets/hero_image.jpeg')">
   <div class="hero-text">
     <h1>Breeding quality PWD dogs since 2005</h1>
   </div>
@@ -32,4 +32,25 @@ title: Home
    ## Contact Us
   
    <p>If you are interested in learning more about our dogs or our breeding program, please don't hesitate to contact us. We would love to hear from you!</p>
+
+<p>If you are interested in learning more about our dogs or our breeding program, please don't hesitate to contact us. We would love to hear from you!</p>
+
+   <p>If you are interested in learning more about our dogs or our breeding program, please don't hesitate to contact us. We would love to hear from you!</p>
+   ## Welcome to [Your Kennel Name]
+  
+   <p> We are a small, family-run kennel dedicated to breeding healthy, well-tempered Portuguese Water Dogs. Our dogs are our passion, and we strive to produce puppies that will bring joy and companionship to their forever homes. </p>
+
+   ## About the Portuguese Water Dog   ## Welcome to [Your Kennel Name]
+  
+   <p> We are a small, family-run kennel dedicated to breeding healthy, well-tempered Portuguese Water Dogs. Our dogs are our passion, and we strive to produce puppies that will bring joy and companionship to their forever homes. </p>
+
+   ## About the Portuguese Water Dog   ## Welcome to [Your Kennel Name]
+  
+   <p> We are a small, family-run kennel dedicated to breeding healthy, well-tempered Portuguese Water Dogs. Our dogs are our passion, and we strive to produce puppies that will bring joy and companionship to their forever homes. </p>
+
+   ## About the Portuguese Water Dog   ## Welcome to [Your Kennel Name]
+  
+   <p> We are a small, family-run kennel dedicated to breeding healthy, well-tempered Portuguese Water Dogs. Our dogs are our passion, and we strive to produce puppies that will bring joy and companionship to their forever homes. </p>
+
+   ## About the Portuguese Water Dog
 </div>
