@@ -5,14 +5,13 @@
     background-size: cover;
     height: 500px; /* Adjust as needed */
     background-position-y: -100px;
+    display: flex;
 }
 
 .hero-text {
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: static;
+    transform: translate(+50%, +50%);
     color: white; /* Or a contrasting color */
 }
 
