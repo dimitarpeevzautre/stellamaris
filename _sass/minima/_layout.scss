@@ -66,6 +66,7 @@
   .page-link {
     color: $text-color;
     line-height: $base-line-height;
+    text-transform: uppercase;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -203,7 +204,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: 0;
   flex: 1;
 }
 

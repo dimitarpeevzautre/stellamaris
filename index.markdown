@@ -12,13 +12,24 @@ title: Home
   </div>
 </div>
 
-<script>
-window.addEventListener('scroll', function() {
-  var heroImage = document.querySelector('.hero-image');
-  var scrollPosition = window.pageYOffset;
+<div class="wrapper">
+   ## Welcome to [Your Kennel Name]
+  
+   <p> We are a small, family-run kennel dedicated to breeding healthy, well-tempered Portuguese Water Dogs. Our dogs are our passion, and we strive to produce puppies that will bring joy and companionship to their forever homes. </p>
 
-  // Adjust the factor to control the parallax effect
-  var backgroundPositionY = scrollPosition * 0.3 + 'px'; 
-  heroImage.style.backgroundPositionY = backgroundPositionY;
-});
-</script>
+   ## About the Portuguese Water Dog
+   
+   <p>The Portuguese Water Dog is an intelligent, active, and loyal breed known for its love of water and its hypoallergenic coat. These dogs are excellent companions for families and individuals who can provide them with plenty of exercise and mental stimulation.</p>
+  
+   ## Our Breeding Program
+  
+   <p>We carefully select our breeding dogs based on health, temperament, and conformation to breed standards. All of our puppies are raised in our home with lots of love and socialization.</p>
+
+   ## Testimonials
+
+   <p>"We are so happy with our puppy from [Your Kennel Name]! He is the sweetest, most loving dog we've ever had." - [Testimonial Author]</p>
+
+   ## Contact Us
+  
+   <p>If you are interested in learning more about our dogs or our breeding program, please don't hesitate to contact us. We would love to hear from you!</p>
+</div>

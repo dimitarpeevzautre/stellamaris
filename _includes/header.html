@@ -18,7 +18,6 @@
     </script>
   </div>
 
-  <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     <nav class="site-nav">
@@ -53,5 +52,5 @@
       {%- endif -%}
       <hr class="nav-line">
     </nav>
-  </div>
+
 </header>
