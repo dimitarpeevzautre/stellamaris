@@ -36,6 +36,7 @@ function startSlideshow() {
 }
 
 // Start the slideshow immediately
-startSlideshow();
+document.addEventListener('DOMContentLoaded', startSlideshow);
+
 
 //add the scroll to set visible class
