@@ -25,6 +25,14 @@
   }
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-height: 150px;
+}
+
 .site-title {
   @include relative-font-size(1.625);
   font-weight: 300;
@@ -34,7 +42,8 @@
   float: left;
   width: 100%;
   box-sizing: border-box;
-
+  background-color: #e0d8ca;
+  
   &,
   &:visited {
     color: $grey-color-dark;
