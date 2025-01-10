@@ -3,9 +3,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px; /* Adjust as needed */
+    aspect-ratio: 4/2;
     background-position-y: -100px;
     display: flex;
+
+    @include media-query($on-palm) {
+        aspect-ratio: 4/5;
+    }
 }
 
 .hero-text {
@@ -13,6 +17,10 @@
     position: static;
     transform: translate(+50%, +50%);
     color: white; /* Or a contrasting color */
+
+    @include media-query($on-laptop) {
+        display:none;
+    }
 }
 
 .parallax {
