@@ -14,13 +14,13 @@ title: Home
 
 <div class="wrapper">
   <section class="three-column-section">
-    <h2 class="section-title">Raising top quality Portuguese Water Dogs in Eastern Europe</h2>
+    <h2 class="section-title fade-in-section">Raising top quality Portuguese Water Dogs in Eastern Europe</h2>
     <div class="image-container">
       <img src="assets/home_image1.jpg" alt="The puppy Amadeus Mozart" class="square-image">
       <img src="assets/home_image2.jpg" alt="The puppy Alma Sol" class="square-image">
       <img src="assets/home_image3.jpg" alt="The dog Arthur Rubinstein" class="square-image">
     </div>
-    <p>
+    <p class="fade-in-section">
       Leash fetch tennis ball collar brush go for a walk fur temperament bark toy harness kibble howl sit and stay woof leash fetch tennis ball collar brush go for a walk fur temperament bark toy harness kibble howl sit and stay woof leash fetch tennis ball collar brush go for a walk fur temperament bark toy harness kibble howl.
     </p>
   </section>
@@ -64,7 +64,7 @@ title: Home
 
    ## About the Portuguese Water Dog   ## Welcome to [Your Kennel Name]
   
-   <p> We are a small, family-run kennel dedicated to breeding healthy, well-tempered Portuguese Water Dogs. Our dogs are our passion, and we strive to produce puppies that will bring joy and companionship to their forever homes. </p>
+   <p class="fade-in-section"> Fade IN We are a small, family-run kennel dedicated to breeding healthy, well-tempered Portuguese Water Dogs. Our dogs are our passion, and we strive to produce puppies that will bring joy and companionship to their forever homes. </p>
 
    ## About the Portuguese Water Dog
 </div>

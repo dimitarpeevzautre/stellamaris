@@ -35,8 +35,33 @@ function startSlideshow() {
   return setInterval(changeImage, 3000);
 }
 
+function slidein() {
+  // Select all elements with the fade-in-section class
+  const fadeElements = document.querySelectorAll('.fade-in-section');
+
+  // Create an Intersection Observer instance
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+          }
+          else {
+              entry.target.classList.remove('is-visible');
+          }
+      });
+  }, {
+      // Observer options
+      threshold: 0.1, // Trigger when at least 10% of the element is visible
+      rootMargin: '0px' // No margin around the viewport
+  });
+
+  // Start observing each fade element
+  fadeElements.forEach(element => {
+    observer.observe(element);
+  });
+}
+
+
 // Start the slideshow immediately
 document.addEventListener('DOMContentLoaded', startSlideshow);
-
-
-//add the scroll to set visible class
+document.addEventListener('DOMContentLoaded', slidein);
