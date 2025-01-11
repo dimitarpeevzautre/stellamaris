@@ -27,6 +27,29 @@ title: Home
 </div>
 
 <div class="wrapper">
+    <h2>What sets us apart?</h2>
+    <div class="container">
+        <div class="column">
+            <h3>Years of Experience</h3>
+            <p>Woof leash fetch tennis ball collar brush go for a walk fur temperament bark toy harness kibble howl sit and stay woof leash fetch tennis ball collar brush go for a walk.</p>
+        </div>
+        <div class="column">
+            <h3>Daily Puppy Handling</h3>
+            <p>Harness kibble howl sit and stay woof leash fetch tennis ball collar brush go for a walk fur temperament bark toy harness kibble howl sit and stay woof fetch.</p>
+        </div>
+        <div class="column">
+            <h3>Passion + Integrity</h3>
+            <p>Brush go for a walk fur temperament bark toy harness kibble howl sit and stay woof leash fetch tennis ball collar brush go for a walk fur temperament bark toy harness.</p>
+        </div>
+        <div class="column">
+            <h3>It's Not Just A Hobby</h3>
+            <p>Collar brush go for a walk fur temperament bark toy harness kibble howl sit and stay woof leash fetch tennis ball collar brush go for a walk fur temperament.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="wrapper">
    ## Welcome to [Your Kennel Name]
   
    <p> We are a small, family-run kennel dedicated to breeding healthy, well-tempered Portuguese Water Dogs. Our dogs are our passion, and we strive to produce puppies that will bring joy and companionship to their forever homes. </p>
