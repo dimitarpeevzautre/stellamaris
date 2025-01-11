@@ -44,6 +44,7 @@ function slidein() {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
               entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
           }
           else {
               entry.target.classList.remove('is-visible');
@@ -51,7 +52,7 @@ function slidein() {
       });
   }, {
       // Observer options
-      threshold: 0.1, // Trigger when at least 10% of the element is visible
+      threshold: 0.3, // Trigger when at least 30% of the element is visible
       rootMargin: '0px' // No margin around the viewport
   });
 
