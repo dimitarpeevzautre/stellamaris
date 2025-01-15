@@ -1,11 +1,17 @@
 window.addEventListener('scroll', function() {
-  var heroImage = document.querySelector('.hero-image');
+  // Get all elements with the class 'paralax-image'
+  var parallaxImages = document.querySelectorAll('.parallax-image');
   var scrollPosition = window.pageYOffset;
 
-  // Adjust the factor to control the parallax effect
-  var backgroundPositionY = (scrollPosition * 0.2 - 100) + 'px'; 
-  heroImage.style.backgroundPositionY = backgroundPositionY;
+  // Loop through each parallax image
+  parallaxImages.forEach(function(image) {
+    // Adjust the factor to control the parallax effect 
+    // You might want to adjust the factor (0.2 here) for different images
+    var backgroundPositionY = (scrollPosition * 0.2 - 100) + 'px'; 
+    image.style.backgroundPositionY = backgroundPositionY;
+  });
 });
+
 
 function startSlideshow() {
   const images = document.querySelectorAll('.square-image');
@@ -33,6 +39,20 @@ function startSlideshow() {
 
   // Change image every 3 seconds
   return setInterval(changeImage, 3000);
+}
+
+function startCarousel() {
+  const items = document.querySelectorAll('.carousel > div');
+  let currentIndex = 0;
+
+  function changeItem() {
+    items[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % items.length;
+    items[currentIndex].classList.add('active');
+  }
+
+  // Change image every 3 seconds
+  return setInterval(changeItem, 3000);
 }
 
 function slidein() {
@@ -66,3 +86,4 @@ function slidein() {
 // Start the slideshow immediately
 document.addEventListener('DOMContentLoaded', startSlideshow);
 document.addEventListener('DOMContentLoaded', slidein);
+document.addEventListener('DOMContentLoaded', startCarousel);

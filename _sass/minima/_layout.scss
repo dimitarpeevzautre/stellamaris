@@ -361,3 +361,16 @@ h2 {
   font-size: 14px;
   line-height: 1.6;
 }
+
+.carousel {
+  div {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  div.active {
+    opacity: 100;
+    display: block;
+  }
+}

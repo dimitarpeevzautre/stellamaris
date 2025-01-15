@@ -6,8 +6,8 @@ layout: default
 title: Home
 ---
 
-<div class="hero-image parralax" style="background-image: url('assets/hero_image.jpeg')">
-  <div class="hero-text">
+<div class="parallax-image" style="background-image: url('assets/hero_image.jpeg')">
+  <div class="parallax-text">
     <h1>Breeding quality PWD dogs since 2005</h1>
   </div>
 </div>
@@ -48,6 +48,15 @@ title: Home
     </div>
 </div>
 
+<div class="parallax-image" style="background-image: url('assets/home_image1.jpg')">
+  <div class="parallax-text">
+    <h2>What Our Families Say</h2>
+    <div class="carousel">
+      <div class="active">Family one</div>
+      <div>Family two</div>
+    </div>
+  </div>
+</div>
 
 <div class="wrapper">
    ## Welcome to [Your Kennel Name]

@@ -1,4 +1,4 @@
-.hero-image {
+.parallax-image {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -6,16 +6,17 @@
     aspect-ratio: 4/2;
     background-position-y: -100px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include media-query($on-palm) {
         aspect-ratio: 4/5;
     }
 }
 
-.hero-text {
+.parallax-text {
     text-align: center;
     position: static;
-    transform: translate(+50%, +50%);
     color: white; /* Or a contrasting color */
 
     @include media-query($on-laptop) {
