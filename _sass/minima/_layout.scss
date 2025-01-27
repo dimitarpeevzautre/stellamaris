@@ -172,13 +172,13 @@
 }
 
 .footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(25% - (#{$spacing-unit} / 2));
+  width:         calc(25% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:         calc(20% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+  width:         calc(30% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
@@ -348,6 +348,10 @@ h2 {
   padding: 20px 0;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
+
+  @include media-query($on-laptop) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .column h3 {
@@ -367,6 +371,7 @@ h2 {
     opacity: 0;
     display: none;
     transition: opacity 0.5s ease-in-out;
+    font-style: italic;
   }
 
   div.active {
