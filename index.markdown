@@ -14,14 +14,14 @@ title: Home
 
 <div class="wrapper">
   <section class="three-column-section">
-    <h2 class="section-title fade-in-section">Raising top quality Portuguese Water Dogs in Eastern Europe</h2>
+    <h2 class="section-title fade-in-section">Raising top Portuguese Water Dogs in Sofia, Bulgaria</h2>
     <div class="image-container">
       <img src="assets/home_image1.jpg" alt="The puppy Amadeus Mozart" class="square-image">
       <img src="assets/home_image2.jpg" alt="The puppy Alma Sol" class="square-image">
       <img src="assets/home_image3.jpg" alt="The dog Arthur Rubinstein" class="square-image">
     </div>
     <p class="fade-in-section">
-      Leash fetch tennis ball collar brush go for a walk fur temperament bark toy harness kibble howl sit and stay woof leash fetch tennis ball collar brush go for a walk fur temperament bark toy harness kibble howl sit and stay woof leash fetch tennis ball collar brush go for a walk fur temperament bark toy harness kibble howl.
+ At Stella Maris, we're a community of passionate dog lovers. We connect people with their perfect canine companions, provide expert advice and training resources, and foster a shared love for all things dog. Join us and experience the difference a supportive community can make!
     </p>
   </section>
 </div>
@@ -31,19 +31,20 @@ title: Home
     <div class="container">
         <div class="column">
             <h3>Years of Experience</h3>
-            <p>Woof leash fetch tennis ball collar brush go for a walk fur temperament bark toy harness kibble howl sit and stay woof leash fetch tennis ball collar brush go for a walk.</p>
+            <p>We've seen it all and learned from the best, refining our breeding practices and canine care expertise over the years. This deep understanding of dog breeding and behavior allows us to provide the highest quality care and guidance to our clients and their furry companions.</p>
         </div>
         <div class="column">
             <h3>Daily Puppy Handling</h3>
-            <p>Harness kibble howl sit and stay woof leash fetch tennis ball collar brush go for a walk fur temperament bark toy harness kibble howl sit and stay woof fetch.</p>
+            <p>We believe that early socialization is crucial for happy, well-adjusted dogs. That's why we handle our puppies daily, introducing them to a variety of sights, sounds, and experiences. This helps them develop confidence and good manners, setting them up for success in their forever homes.
+            </p>
         </div>
         <div class="column">
             <h3>Passion + Integrity</h3>
-            <p>Brush go for a walk fur temperament bark toy harness kibble howl sit and stay woof leash fetch tennis ball collar brush go for a walk fur temperament bark toy harness.</p>
+            <p>Our love for dogs is at the heart of everything we do. We're committed to ethical breeding practices, prioritizing the health and well-being of our dogs above all else. With us, you can trust that you're getting a happy, healthy puppy from a responsible breeder.</p>
         </div>
         <div class="column">
             <h3>It's Not Just A Hobby</h3>
-            <p>Collar brush go for a walk fur temperament bark toy harness kibble howl sit and stay woof leash fetch tennis ball collar brush go for a walk fur temperament.</p>
+            <p>Raising and caring for dogs is more than just a job for us – it's our passion and our life's work. We pour our hearts and souls into ensuring that every dog in our care receives the love, attention, and expert care they deserve.</p>
         </div>
     </div>
 </div>
@@ -52,51 +53,9 @@ title: Home
   <div class="parallax-text">
     <h2>What Our Families Say</h2>
     <div class="carousel">
-      <div class="active">Family one</div>
-      <div>Family two</div>
+      <div class="active">"Our dog, Aramis, is the best! We can't thank Steli enough for bringing him into our lives."</div>
+      <div>"Stella Maris made the whole process so easy, and we felt confident bringing our new puppy home, even though she had a log plane trip."</div>
+      <div>"Alma Sol is a bundle of joy, I can't imagine my life without this little cuteness. Thank you Stella for you care and bringing her to me!"</div>
     </div>
   </div>
-</div>
-
-<div class="wrapper">
-   ## Welcome to [Your Kennel Name]
-  
-   <p> We are a small, family-run kennel dedicated to breeding healthy, well-tempered Portuguese Water Dogs. Our dogs are our passion, and we strive to produce puppies that will bring joy and companionship to their forever homes. </p>
-
-   ## About the Portuguese Water Dog
-   
-   <p>The Portuguese Water Dog is an intelligent, active, and loyal breed known for its love of water and its hypoallergenic coat. These dogs are excellent companions for families and individuals who can provide them with plenty of exercise and mental stimulation.</p>
-  
-   ## Our Breeding Program
-  
-   <p>We carefully select our breeding dogs based on health, temperament, and conformation to breed standards. All of our puppies are raised in our home with lots of love and socialization.</p>
-
-   ## Testimonials
-
-   <p>"We are so happy with our puppy from [Your Kennel Name]! He is the sweetest, most loving dog we've ever had." - [Testimonial Author]</p>
-
-   ## Contact Us
-  
-   <p>If you are interested in learning more about our dogs or our breeding program, please don't hesitate to contact us. We would love to hear from you!</p>
-
-<p>If you are interested in learning more about our dogs or our breeding program, please don't hesitate to contact us. We would love to hear from you!</p>
-
-   <p>If you are interested in learning more about our dogs or our breeding program, please don't hesitate to contact us. We would love to hear from you!</p>
-   ## Welcome to [Your Kennel Name]
-  
-   <p> We are a small, family-run kennel dedicated to breeding healthy, well-tempered Portuguese Water Dogs. Our dogs are our passion, and we strive to produce puppies that will bring joy and companionship to their forever homes. </p>
-
-   ## About the Portuguese Water Dog   ## Welcome to [Your Kennel Name]
-  
-   <p> We are a small, family-run kennel dedicated to breeding healthy, well-tempered Portuguese Water Dogs. Our dogs are our passion, and we strive to produce puppies that will bring joy and companionship to their forever homes. </p>
-
-   ## About the Portuguese Water Dog   ## Welcome to [Your Kennel Name]
-  
-   <p> We are a small, family-run kennel dedicated to breeding healthy, well-tempered Portuguese Water Dogs. Our dogs are our passion, and we strive to produce puppies that will bring joy and companionship to their forever homes. </p>
-
-   ## About the Portuguese Water Dog   ## Welcome to [Your Kennel Name]
-  
-   <p class="fade-in-section"> Fade IN We are a small, family-run kennel dedicated to breeding healthy, well-tempered Portuguese Water Dogs. Our dogs are our passion, and we strive to produce puppies that will bring joy and companionship to their forever homes. </p>
-
-   ## About the Portuguese Water Dog
 </div>
