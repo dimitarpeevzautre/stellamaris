@@ -49,7 +49,7 @@ title: Home
     </div>
 </div>
 
-<div class="parallax-image" style="background-image: url('assets/home_image1.jpg')">
+<div class="parallax-image" data-parallax-offset="400" style="background-image: url('assets/home_image1.jpg')">
   <div class="parallax-text">
     <h2>What Our Families Say</h2>
     <div class="carousel">

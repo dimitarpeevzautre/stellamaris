@@ -1,17 +1,21 @@
 window.addEventListener('scroll', function() {
-  // Get all elements with the class 'paralax-image'
+  // Get all elements with the class 'parallax-image'
   var parallaxImages = document.querySelectorAll('.parallax-image');
   var scrollPosition = window.pageYOffset;
 
   // Loop through each parallax image
   parallaxImages.forEach(function(image) {
-    // Adjust the factor to control the parallax effect 
-    // You might want to adjust the factor (0.2 here) for different images
-    var backgroundPositionY = (scrollPosition * 0.2 - 100) + 'px'; 
+    // Get the data-parallax-factor attribute or use a default value
+    var parallaxFactor = parseFloat(image.dataset.parallaxFactor) || 0.2; 
+    
+    // Get the data-parallax-offset attribute or use a default value
+    var parallaxOffset = parseFloat(image.dataset.parallaxOffset) || 100;
+
+    // Adjust the background position based on the factor and offset
+    var backgroundPositionY = (scrollPosition * parallaxFactor - parallaxOffset) + 'px';
     image.style.backgroundPositionY = backgroundPositionY;
   });
 });
-
 
 function startSlideshow() {
   const images = document.querySelectorAll('.square-image');
