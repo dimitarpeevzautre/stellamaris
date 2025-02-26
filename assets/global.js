@@ -61,7 +61,7 @@ function startCarousel() {
 
 function slidein() {
   // Select all elements with the fade-in-section class
-  const fadeElements = document.querySelectorAll('.fade-in-section');
+  const fadeElements = document.querySelectorAll('.fade-in-section, .image-text-container, .dog-profile, .puppy-info-item, .current-litter, .planned-litter, .past-litter, .centered-content, .faq-item, .contact-container');
 
   // Create an Intersection Observer instance
   const observer = new IntersectionObserver((entries) => {
@@ -76,7 +76,7 @@ function slidein() {
       });
   }, {
       // Observer options
-      threshold: 0.3, // Trigger when at least 30% of the element is visible
+      threshold: 0.1, // Trigger when at least 10% of the element is visible
       rootMargin: '0px' // No margin around the viewport
   });
 
