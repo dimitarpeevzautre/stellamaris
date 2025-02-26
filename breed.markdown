@@ -25,7 +25,7 @@ title: About The Breed
       <img src="assets/home_image2.jpg" alt="Portuguese Water Dog showing coat" class="breed-image">
       <div class="text-content">
         <h3>Physical Characteristics</h3>
-        <p>PWDs are medium-sized, robust dogs with strong, athletic builds that reflect their working heritage. They typically stand 17-23 inches tall and weigh between 35-60 pounds, with males generally larger than females.</p>
+        <p>PWDs are medium-sized, robust dogs with strong, athletic builds that reflect their working heritage. They typically stand 43-58 centimeters tall and weigh between 16-27 kilograms, with males generally larger than females.</p>
         <p>One of their most distinctive features is their coat, which comes in two varieties: the curly coat (compact, cylindrical curls) and the wavy coat (falling in gentle waves). The breed is known for being non-shedding and is often considered suitable for people with allergies.</p>
         <p>PWDs come in various colors, including black, white, brown, and combinations with white markings. Their expressive eyes and intelligent expression reflect their alert, attentive nature.</p>
       </div>
