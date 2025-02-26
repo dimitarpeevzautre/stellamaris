@@ -52,7 +52,7 @@ title: Litters
       </div>
     </div>
     
-    <div class="planned-litters fade-in-section">
+    <div class="fade-in-section">
       <h3>Upcoming Planned Litters</h3>
       
       <div class="planned-litter">
@@ -88,7 +88,7 @@ title: Litters
       </div>
     </div>
     
-    <div class="past-litters-section fade-in-section">
+    <div class="fade-in-section">
       <h3>Past Litters</h3>
       <p>We take pride in the puppies we've produced and maintain relationships with their families. Our past litters have produced companions, performance dogs, and show champions.</p>
       
