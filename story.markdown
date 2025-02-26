@@ -9,7 +9,7 @@ title: Our Story
 <div class="wrapper">
   <section class="content-section fade-in-section">
     <h1>Our Journey with Portuguese Water Dogs</h1>
-    <p>Our journey began in 2005 when we fell in love with the Portuguese Water Dog breed. What started as a passion quickly evolved into a dedicated commitment to preserving and promoting these exceptional dogs.</p>
+    <p>Our journey began in 2016 when we fell in love with the Portuguese Water Dog breed. What started as a passion quickly evolved into a dedicated commitment to preserving and promoting these exceptional dogs.</p>
     
     <div class="image-text-container">
       <img src="assets/home_image1.jpg" alt="Portuguese Water Dog puppy" class="story-image">

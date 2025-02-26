@@ -16,6 +16,7 @@ title: About The Breed
       <div class="text-content">
         <h3>History & Heritage</h3>
         <p>Originally bred along the coast of Portugal, these remarkable dogs were indispensable companions to fishermen for centuries. They were trained to herd fish into nets, retrieve lost tackle or broken nets, and act as couriers from ship to shore.</p>
+        <p>The Portuguese Water Dog, known locally as "Cão de Água" (dog of water), has a history dating back to at least the 8th century. These versatile working dogs were highly valued for their intelligence, strength, and exceptional swimming abilities.</p>
         <p>As modern fishing methods evolved, the breed's numbers declined significantly by the mid-20th century. Thanks to dedicated breeding programs, the Portuguese Water Dog was saved from extinction and has since gained recognition and popularity worldwide.</p>
       </div>
     </div>
