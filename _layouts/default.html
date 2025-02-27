@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
   {%- include head.html -%}
 
@@ -13,7 +13,7 @@
 
     {%- include footer.html -%}
 
-    <script defer src="{{ '/assets/global.js' | relative_url}}"></script>
+    <script defer src="{{ "/assets/global.js" | prepend: site.baseurl_root }}"></script>
   </body>
 
 </html>

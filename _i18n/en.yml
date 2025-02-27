@@ -1,0 +1,24 @@
+global:
+  english: English
+  bulgarian: Български
+  spanish: Español
+
+pages:
+  home:
+    title: Home
+    hero_heading: Breeding quality PWD dogs since 2005
+    section_title: Raising top Portuguese Water Dogs in Sofia, Bulgaria
+    community_text: At Stella Maris, we're a community of passionate dog lovers. We connect people with their perfect canine companions, provide expert advice and training resources, and foster a shared love for all things dog. Join us and experience the difference a supportive community can make!
+    what_sets_apart: What sets us apart?
+    experience_title: Years of Experience
+    experience_text: We've seen it all and learned from the best, refining our breeding practices and canine care expertise over the years. This deep understanding of dog breeding and behavior allows us to provide the highest quality care and guidance to our clients and their furry companions.
+    handling_title: Daily Puppy Handling
+    handling_text: We believe that early socialization is crucial for happy, well-adjusted dogs. That's why we handle our puppies daily, introducing them to a variety of sights, sounds, and experiences. This helps them develop confidence and good manners, setting them up for success in their forever homes.
+    passion_title: Passion + Integrity
+    passion_text: Our love for dogs is at the heart of everything we do. We're committed to ethical breeding practices, prioritizing the health and well-being of our dogs above all else. With us, you can trust that you're getting a happy, healthy puppy from a responsible breeder.
+    hobby_title: It's Not Just A Hobby
+    hobby_text: Raising and caring for dogs is more than just a job for us – it's our passion and our life's work. We pour our hearts and souls into ensuring that every dog in our care receives the love, attention, and expert care they deserve.
+    testimonials_heading: What Our Families Say
+    testimonial1: "Our dog, Aramis, is the best! We can't thank Steli enough for bringing him into our lives."
+    testimonial2: "Stella Maris made the whole process so easy, and we felt confident bringing our new puppy home, even though she had a log plane trip."
+    testimonial3: "Alma Sol is a bundle of joy, I can't imagine my life without this little cuteness. Thank you Stella for you care and bringing her to me!"

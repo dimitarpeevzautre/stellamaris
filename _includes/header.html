@@ -22,12 +22,10 @@
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     <nav class="site-nav">
       <hr class="nav-line">
-      <div class="nav-spacer" style="height:28px"></div>
-      <hr class="nav-line">
 
       <div class="nav-spacer"></div>
       <div class="logo-container">
-        <a class="site-title" rel="author" href="{{ "/" | relative_url }}"><img src="assets/sm_logo.svg" alt="logo" width="250px"/></a>
+        <a class="site-title" rel="author" href="{{ "/" | relative_url }}"><img src="/assets/sm_logo.svg" alt="logo" width="250px"/></a>
       </div>
       <div class="nav-spacer"></div>
       <hr class="nav-line">
@@ -48,6 +46,32 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
+          
+          <div class="language-flags">
+            {% for lang in site.languages %}
+              {% if lang == site.default_lang %}
+                {% if lang == site.lang %}
+                  <span class="flag active" title="{{ site.language_names[lang] }}">
+                    <img src="{{ "/assets/flags/" | prepend: site.baseurl_root }}{{ lang }}.svg" alt="{{ site.language_names[lang] }}">
+                  </span>
+                {% else %}
+                  <a href="{{ site.baseurl_root }}/" class="flag" title="{{ site.language_names[lang] }}">
+                    <img src="{{ "/assets/flags/" | prepend: site.baseurl_root }}{{ lang }}.svg" alt="{{ site.language_names[lang] }}">
+                  </a>
+                {% endif %}
+              {% else %}
+                {% if lang == site.lang %}
+                  <span class="flag active" title="{{ site.language_names[lang] }}">
+                    <img src="{{ "/assets/flags/" | prepend: site.baseurl_root }}{{ lang }}.svg" alt="{{ site.language_names[lang] }}">
+                  </span>
+                {% else %}
+                  <a href="{{ site.baseurl_root }}/{{ lang }}/" class="flag" title="{{ site.language_names[lang] }}">
+                    <img src="{{ "/assets/flags/" | prepend: site.baseurl_root }}{{ lang }}.svg" alt="{{ site.language_names[lang] }}">
+                  </a>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
       {%- endif -%}
       <hr class="nav-line">

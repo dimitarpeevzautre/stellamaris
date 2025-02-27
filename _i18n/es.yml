@@ -1,0 +1,24 @@
+global:
+  english: English
+  bulgarian: Български
+  spanish: Español
+
+pages:
+  home:
+    title: Inicio
+    hero_heading: Criando perros de agua portugueses de calidad desde 2005
+    section_title: Criando los mejores perros de agua portugueses en Sofía, Bulgaria
+    community_text: En Stella Maris, somos una comunidad de apasionados amantes de los perros. Conectamos a las personas con sus perfectos compañeros caninos, ofrecemos consejos de expertos y recursos de entrenamiento, y fomentamos un amor compartido por todo lo relacionado con los perros. ¡Únete a nosotros y experimenta la diferencia que puede hacer una comunidad de apoyo!
+    what_sets_apart: ¿Qué nos diferencia?
+    experience_title: Años de experiencia
+    experience_text: Hemos visto de todo y aprendido de los mejores, perfeccionando nuestras prácticas de cría y experiencia en el cuidado canino a lo largo de los años. Esta profunda comprensión de la cría y el comportamiento de los perros nos permite brindar el más alto nivel de cuidado y orientación a nuestros clientes y sus peludos compañeros.
+    handling_title: Manejo diario de cachorros
+    handling_text: Creemos que la socialización temprana es crucial para perros felices y bien adaptados. Por eso manejamos a nuestros cachorros a diario, introduciéndolos a una variedad de vistas, sonidos y experiencias. Esto les ayuda a desarrollar confianza y buenos modales, preparándolos para el éxito en sus hogares definitivos.
+    passion_title: Pasión + Integridad
+    passion_text: Nuestro amor por los perros está en el corazón de todo lo que hacemos. Estamos comprometidos con prácticas éticas de cría, priorizando la salud y el bienestar de nuestros perros por encima de todo. Con nosotros, puedes confiar en que estás recibiendo un cachorro feliz y saludable de un criador responsable.
+    hobby_title: No es solo un pasatiempo
+    hobby_text: Criar y cuidar perros es más que solo un trabajo para nosotros – es nuestra pasión y el trabajo de nuestra vida. Ponemos nuestros corazones y almas en asegurar que cada perro bajo nuestro cuidado reciba el amor, la atención y el cuidado experto que merece.
+    testimonials_heading: Lo que dicen nuestras familias
+    testimonial1: "¡Nuestro perro, Aramis, es el mejor! No podemos agradecer lo suficiente a Steli por traerlo a nuestras vidas."
+    testimonial2: "Stella Maris hizo todo el proceso muy fácil, y nos sentimos seguros al traer a nuestro nuevo cachorro a casa, a pesar de que tuvo un largo viaje en avión."
+    testimonial3: "Alma Sol es un paquete de alegría, no puedo imaginar mi vida sin esta pequeña ternura. ¡Gracias Stella por tu cuidado y por traerla a mí!"
