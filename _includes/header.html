@@ -1,5 +1,22 @@
 <header class="site-header" role="banner">
+  <div id="banner">
+    <h3>Upcoming litter in December 2025</h3>
+    <button class="close-button" onclick="hideBanner()">
+      <svg viewBox="0 0 24 24" width="24" height="24" class="svg-icon">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+      </svg>
+    </button>
+    <script>
+      function hideBanner() {
+        document.getElementById('banner').style.display = 'none';
+        sessionStorage.setItem('bannerHidden', 'true');
+      }
 
+      if (sessionStorage.getItem('bannerHidden') === 'true') {
+          document.getElementById('banner').style.display = 'none';
+      }
+    </script>
+  </div>
 
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
