@@ -203,7 +203,7 @@ title: Apply
         <input type="hidden" name="form-type" value="puppy-application">
         
         <!-- Redirect after submission -->
-        <input type="hidden" name="_next" value="https://stellamaris.com/thanks.html">
+        <input type="hidden" name="_next" value="https://stellamaris.dog/thanks.html">
         
         <button type="submit" class="submit-button">Submit Application</button>
       </form>

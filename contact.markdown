@@ -36,7 +36,7 @@ title: Contact
             <i class="contact-icon email-icon"></i>
             <div class="contact-text">
               <h4>Email</h4>
-              <p>hello@stellamaris.com</p>
+              <p>hello@stellamaris.dog</p>
             </div>
           </div>
           
@@ -97,7 +97,7 @@ title: Contact
           <input type="text" name="_gotcha" style="display:none">
           
           <!-- Redirect after submission -->
-          <input type="hidden" name="_next" value="https://stellamaris.com/thanks.html">
+          <input type="hidden" name="_next" value="https://stellamaris.dog/thanks.html">
           
           <button type="submit" class="submit-button">Send Message</button>
         </form>
