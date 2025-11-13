@@ -28,7 +28,7 @@ title: Contact
             <i class="contact-icon phone-icon"></i>
             <div class="contact-text">
               <h4>Phone</h4>
-              <p>+359 887 395 978</p>
+              <p>+359 897 014 015</p>
             </div>
           </div>
           
