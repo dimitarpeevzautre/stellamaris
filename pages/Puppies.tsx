@@ -178,7 +178,7 @@ const Puppies: React.FC = () => {
                                 <div className="border-t border-gray-100 p-8 bg-gray-50">
                                     <h4 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6 text-center">{t('puppies.more_from_litter')}</h4>
                                     <div className="max-w-2xl mx-auto">
-                                        <ImageCarousel images={litter.gallery} className="h-[400px]" />
+                                        <ImageCarousel images={litter.gallery} className="" adaptiveHeight={true} />
                                     </div>
                                 </div>
                             )}

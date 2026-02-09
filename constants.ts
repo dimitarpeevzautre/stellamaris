@@ -128,9 +128,9 @@ export const LITTERS: Litter[] = [
     description: 'The Kings litter. Riva gave birth on the 25th of December of 9 healthy strong boys. 8 of them are brown, what are the chances?',
     image: '/images/kings.png',
     gallery: [
-      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1591160690555-5debfba289f0?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1000&auto=format&fit=crop'
+      '/images/gallery-kings/compressed_IMG_20260102_132651492.jpg',
+      '/images/gallery-kings/compressed_IMG_20260203_123036793.jpg',
+      '/images/gallery-kings/compressed_IMG_4141.jpg'
     ]
   }
 ];
