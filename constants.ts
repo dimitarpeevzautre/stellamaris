@@ -49,10 +49,19 @@ export const TESTIMONIALS = [
 ];
 
 export const ABOUT_GALLERY = [
-    "https://images.unsplash.com/photo-1544568100-847a948585b9?q=80&w=1000&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?q=80&w=1000&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1000&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1000&auto=format&fit=crop"
+  "/images/gallery-story/compressed_20220621_114512~2.jpg",
+  "/images/gallery-story/compressed_20220622_075858.jpg",
+  "/images/gallery-story/compressed_20230822_152334.jpg",
+  "/images/gallery-story/compressed_20230905_111232.jpg",
+  "/images/gallery-story/compressed_20240814_092410.jpg",
+  "/images/gallery-story/compressed_20240816_113613.jpg",
+  "/images/gallery-story/compressed_20240817_085158.jpg",
+  "/images/gallery-story/compressed_20240831_194409.jpg",
+  "/images/gallery-story/compressed_IMG-1d468916d27c559cafe93fe2a83e1cb3-V-EDIT.jpg",
+  "/images/gallery-story/compressed_IMG_20190923_110020.jpg",
+  "/images/gallery-story/compressed_IMG_20250127_112613.jpg",
+  "/images/gallery-story/compressed_RLL09337.jpg",
+  "/images/gallery-story/compressed_Screenshot_20250127_090833.jpg"
 ];
 
 export const DOGS: Dog[] = [
@@ -119,9 +128,9 @@ export const LITTERS: Litter[] = [
     description: 'The Kings litter. Riva gave birth on the 25th of December of 9 healthy strong boys. 8 of them are brown, what are the chances?',
     image: '/images/kings.png',
     gallery: [
-        'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1591160690555-5debfba289f0?q=80&w=1000&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1000&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1591160690555-5debfba289f0?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1000&auto=format&fit=crop'
     ]
   }
 ];
