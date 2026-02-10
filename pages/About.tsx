@@ -54,7 +54,25 @@ const About: React.FC = () => {
           <h2 className="text-2xl font-serif text-stella-dark mb-4">{t('about.gallery_title')}</h2>
           <div className="h-px w-20 bg-stella-gold mx-auto mb-8"></div>
           <div className="max-w-3xl mx-auto shadow-xl rounded-2xl overflow-hidden">
-            <ImageCarousel images={ABOUT_GALLERY} className="" adaptiveHeight={true} />
+            <ImageCarousel
+              images={ABOUT_GALLERY}
+              altTexts={[
+                "Portuguese Water Dogs enjoying a lake outing with the family",
+                "Portuguese Water Dog exploring the outdoors",
+                "Stella Maris Portuguese Water Dogs on a summer adventure",
+                "Portuguese Water Dog puppies socializing at Stella Maris Kennel",
+                "Portuguese Water Dogs relaxing in the garden near Sofia",
+                "Family time with Portuguese Water Dogs at Stella Maris",
+                "Portuguese Water Dog by the Vitosha Mountains, Bulgaria",
+                "Evening walk with Portuguese Water Dogs in Sofia",
+                "Stella Maris Kennel family portrait with their Portuguese Water Dogs",
+                "Portuguese Water Dog puppy playtime at Stella Maris",
+                "Portuguese Water Dogs in the snow near Sofia, Bulgaria",
+                "Champion Portuguese Water Dog at a dog show",
+                "Life at Stella Maris Kennel with Portuguese Water Dogs"
+              ]}
+              adaptiveHeight={true}
+            />
           </div>
         </div>
       </div>

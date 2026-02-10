@@ -4,11 +4,12 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ImageCarouselProps {
   images: string[];
+  altTexts?: string[];
   className?: string;
   adaptiveHeight?: boolean;
 }
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className = "", adaptiveHeight = false }) => {
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, altTexts, className = "", adaptiveHeight = false }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
@@ -34,13 +35,15 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className = "", a
       {adaptiveHeight ? (
         <img
           src={images[currentIndex]}
-          alt={`Slide ${currentIndex + 1}`}
+          alt={altTexts?.[currentIndex] || `Photo from Stella Maris Kennel`}
           className="w-full h-auto object-contain rounded-2xl shadow-md duration-500 ease-in-out transition-all block"
         />
       ) : (
         <div
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500 ease-in-out transition-all shadow-md"
           style={{ backgroundImage: `url(${images[currentIndex]})` }}
+          role="img"
+          aria-label={altTexts?.[currentIndex] || `Photo from Stella Maris Kennel`}
         ></div>
       )}
 
