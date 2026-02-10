@@ -42,13 +42,31 @@ export const translations = {
                 "Lifetime Breeder Support",
                 "International Health Certificates"
             ],
-            gallery_title: 'Life at Stella Maris'
+            gallery_title: 'Life at Stella Maris',
+            family_photo_alt: 'Steli and Mitko surrounded by their Portuguese Water Dogs and puppies',
+            gallery_alts: [
+                'Portuguese Water Dogs enjoying a lake outing with the family',
+                'Portuguese Water Dog exploring the outdoors',
+                'Stella Maris Portuguese Water Dogs on a summer adventure',
+                'Portuguese Water Dog puppies socializing at Stella Maris Kennel',
+                'Portuguese Water Dogs relaxing in the garden near Sofia',
+                'Family time with Portuguese Water Dogs at Stella Maris',
+                'Portuguese Water Dog by the Vitosha Mountains, Bulgaria',
+                'Evening walk with Portuguese Water Dogs in Sofia',
+                'Stella Maris Kennel family portrait with their Portuguese Water Dogs',
+                'Portuguese Water Dog puppy playtime at Stella Maris',
+                'Portuguese Water Dogs in the snow near Sofia, Bulgaria',
+                'Champion Portuguese Water Dog at a dog show',
+                'Life at Stella Maris Kennel with Portuguese Water Dogs'
+            ]
         },
         dogs: {
             title: 'Our Foundation',
             subtitle: 'Meet the exceptional pair at the heart of our breeding program. Each selected for their perfect balance of health, temperament, and breed standards.',
             male_role: 'The Sire',
             female_role: 'The Dam',
+            sire_alt: 'Portuguese Water Dog sire at Stella Maris Kennel',
+            dam_alt: 'Portuguese Water Dog dam at Stella Maris Kennel',
             achievements: 'Achievements',
             health: 'Health Clearances',
             quote: '"Our dogs are our family. We have taken care to produce healthy, happy dogs that excel in the ring, on the field, and in your heart."',
@@ -82,6 +100,8 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
             go_home_date: 'Go Home Date',
             inquire: 'Inquire About This Litter',
             more_from_litter: 'More from this litter',
+            litter_alt: 'Portuguese Water Dog litter',
+            puppy_photo_alt: 'Portuguese Water Dog puppy photo',
             past_litters: 'Past Litters',
             waitlist_title: 'How Our Waitlist Works',
             waitlist_desc: 'We accept applications year-round. A deposit is required to hold your spot on a specific litter waitlist once pregnancy is confirmed. We match puppies to families based on temperament testing conducted at 7 weeks of age to ensure the perfect fit for your lifestyle.',
@@ -175,13 +195,31 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
                 "Доживотна подкрепа от развъдчика",
                 "Международни здравни сертификати"
             ],
-            gallery_title: 'Животът в Stella Maris'
+            gallery_title: 'Животът в Stella Maris',
+            family_photo_alt: 'Стели и Митко заобиколени от техните Португалски водни кучета и кученца',
+            gallery_alts: [
+                'Португалски водни кучета на разходка край езерото със семейството',
+                'Португалско водно куче на разходка сред природата',
+                'Португалски водни кучета от Stella Maris на лятно приключение',
+                'Кученца Португалско водно куче на социализация в развъдник Stella Maris',
+                'Португалски водни кучета почиват в градината близо до София',
+                'Семейно време с Португалски водни кучета в Stella Maris',
+                'Португалско водно куче край планината Витоша, България',
+                'Вечерна разходка с Португалски водни кучета в София',
+                'Семейна снимка на развъдник Stella Maris с Португалски водни кучета',
+                'Кученце Португалско водно куче играе в Stella Maris',
+                'Португалски водни кучета в снега край София, България',
+                'Шампион Португалско водно куче на кучешка изложба',
+                'Животът в развъдник Stella Maris с Португалски водни кучета'
+            ]
         },
         dogs: {
             title: 'Нашата Основа',
             subtitle: 'Запознайте се с изключителната двойка в сърцето на нашата развъдна програма. Всеки избран заради перфектния баланс на здраве, темперамент и породни стандарти.',
             male_role: 'Бащата',
             female_role: 'Майката',
+            sire_alt: 'Баща Португалско водно куче в развъдник Stella Maris',
+            dam_alt: 'Майка Португалско водно куче в развъдник Stella Maris',
             achievements: 'Постижения',
             health: 'Здравни изследвания',
             quote: '"Нашите кучета са нашето семейство. Погрижили сме се да създадем здрави, щастливи кучета, които се отличават на ринга, на полето и в сърцето ви."',
@@ -215,6 +253,8 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
             go_home_date: 'Дата на вземане',
             inquire: 'Запитване за това кучило',
             more_from_litter: 'Още от това кучило',
+            litter_alt: 'Кучило Португалско водно куче',
+            puppy_photo_alt: 'Снимка на кученце Португалско водно куче',
             past_litters: 'Предишни кучила',
             waitlist_title: 'Как работи нашият списък на чакащи',
             waitlist_desc: 'Приемаме кандидатури целогодишно. Изисква се депозит за запазване на място в списъка за конкретно кучило след потвърждаване на бременността. Ние свързваме кученцата със семействата въз основа на тестове за темперамент, проведени на 7-седмична възраст, за да гарантираме перфектното съвпадение за вашия начин на живот.',

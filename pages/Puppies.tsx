@@ -127,7 +127,7 @@ const Puppies: React.FC = () => {
                         <div key={litter.id} className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div className="flex flex-col md:flex-row">
                                 <div className="md:w-2/5 min-h-[300px] md:h-auto relative">
-                                    <img src={litter.image} alt={`${litter.sire} x ${litter.dam} Portuguese Water Dog litter — ${litter.puppiesCount} puppies`} className="absolute inset-0 w-full h-full object-cover" />
+                                    <img src={litter.image} alt={`${litter.sire} x ${litter.dam} — ${t('puppies.litter_alt')} — ${litter.puppiesCount}`} className="absolute inset-0 w-full h-full object-cover" />
                                     <div className="absolute top-4 left-4">
                                         <span className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-md
                                         ${litter.status === 'Available' ? 'bg-green-500 text-white' :
@@ -178,7 +178,7 @@ const Puppies: React.FC = () => {
                                 <div className="border-t border-gray-100 p-8 bg-gray-50">
                                     <h4 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6 text-center">{t('puppies.more_from_litter')}</h4>
                                     <div className="max-w-2xl mx-auto">
-                                        <ImageCarousel images={litter.gallery} altTexts={litter.gallery.map((_, i) => `${litter.sire} x ${litter.dam} Portuguese Water Dog puppy photo ${i + 1}`)} className="" adaptiveHeight={true} />
+                                        <ImageCarousel images={litter.gallery} altTexts={litter.gallery.map((_, i) => `${litter.sire} x ${litter.dam} — ${t('puppies.puppy_photo_alt')} ${i + 1}`)} className="" adaptiveHeight={true} />
                                     </div>
                                 </div>
                             )}

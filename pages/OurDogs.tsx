@@ -36,7 +36,7 @@ const OurDogs: React.FC = () => {
                             <div className="relative overflow-hidden aspect-[4/5] shadow-2xl">
                                 <img
                                     src={male.image}
-                                    alt={`${male.name} — ${male.registeredName}, Portuguese Water Dog sire at Stella Maris Kennel`}
+                                    alt={`${male.name} — ${male.registeredName}, ${t('dogs.sire_alt')}`}
                                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
@@ -95,7 +95,7 @@ const OurDogs: React.FC = () => {
                             <div className="relative overflow-hidden aspect-[4/5] shadow-2xl">
                                 <img
                                     src={female.image}
-                                    alt={`${female.name} — ${female.registeredName}, Portuguese Water Dog dam at Stella Maris Kennel`}
+                                    alt={`${female.name} — ${female.registeredName}, ${t('dogs.dam_alt')}`}
                                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                                 />
                             </div>

@@ -18,7 +18,7 @@ const About: React.FC = () => {
         <div className="bg-white shadow-sm border border-gray-100 overflow-hidden mb-16">
           <img
             src="/images/family.jpeg"
-            alt="Steli and Mitko surrounded by their Portuguese Water Dogs and puppies"
+            alt={t('about.family_photo_alt')}
             className="w-full h-auto"
           />
           <div className="p-8 sm:p-16 space-y-6">
@@ -56,21 +56,7 @@ const About: React.FC = () => {
           <div className="max-w-3xl mx-auto shadow-xl rounded-2xl overflow-hidden">
             <ImageCarousel
               images={ABOUT_GALLERY}
-              altTexts={[
-                "Portuguese Water Dogs enjoying a lake outing with the family",
-                "Portuguese Water Dog exploring the outdoors",
-                "Stella Maris Portuguese Water Dogs on a summer adventure",
-                "Portuguese Water Dog puppies socializing at Stella Maris Kennel",
-                "Portuguese Water Dogs relaxing in the garden near Sofia",
-                "Family time with Portuguese Water Dogs at Stella Maris",
-                "Portuguese Water Dog by the Vitosha Mountains, Bulgaria",
-                "Evening walk with Portuguese Water Dogs in Sofia",
-                "Stella Maris Kennel family portrait with their Portuguese Water Dogs",
-                "Portuguese Water Dog puppy playtime at Stella Maris",
-                "Portuguese Water Dogs in the snow near Sofia, Bulgaria",
-                "Champion Portuguese Water Dog at a dog show",
-                "Life at Stella Maris Kennel with Portuguese Water Dogs"
-              ]}
+              altTexts={t('about.gallery_alts') as unknown as string[]}
               adaptiveHeight={true}
             />
           </div>
