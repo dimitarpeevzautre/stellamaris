@@ -18,7 +18,7 @@ const About: React.FC = () => {
         <div className="bg-white shadow-sm border border-gray-100 overflow-hidden mb-16">
           <img
             src="/images/family.jpeg"
-            alt="Steli and Mitko surrounded by their Portuguese Water Dogs and puppies"
+            alt={t('about.family_photo_alt')}
             className="w-full h-auto"
           />
           <div className="p-8 sm:p-16 space-y-6">
@@ -54,7 +54,11 @@ const About: React.FC = () => {
           <h2 className="text-2xl font-serif text-stella-dark mb-4">{t('about.gallery_title')}</h2>
           <div className="h-px w-20 bg-stella-gold mx-auto mb-8"></div>
           <div className="max-w-3xl mx-auto shadow-xl rounded-2xl overflow-hidden">
-            <ImageCarousel images={ABOUT_GALLERY} className="" adaptiveHeight={true} />
+            <ImageCarousel
+              images={ABOUT_GALLERY}
+              altTexts={t('about.gallery_alts') as unknown as string[]}
+              adaptiveHeight={true}
+            />
           </div>
         </div>
       </div>
