@@ -12,8 +12,13 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 import { translations } from '../utils/translations';
 
+const getDefaultLanguage = (): Language => {
+    const browserLang = navigator.language || navigator.languages?.[0] || 'en';
+    return browserLang.startsWith('bg') ? 'bg' : 'en';
+};
+
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [language, setLanguage] = useState<Language>('en');
+    const [language, setLanguage] = useState<Language>(getDefaultLanguage);
 
     const t = (key: string): string => {
         const keys = key.split('.');
