@@ -41,20 +41,26 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, altTexts, classNa
       ) : (
         <div
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500 ease-in-out transition-all shadow-md"
-          style={{ backgroundImage: `url(${images[currentIndex]})` }}
+          style={{ backgroundImage: `url("${images[currentIndex]}")` }}
           role="img"
           aria-label={altTexts?.[currentIndex] || `Photo from Stella Maris Kennel`}
         ></div>
       )}
 
       {/* Left Arrow */}
-      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer hover:bg-black/40 transition-colors">
-        <ChevronLeft onClick={prevSlide} size={30} />
+      <div
+        onClick={prevSlide}
+        className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer hover:bg-black/40 transition-colors z-10"
+      >
+        <ChevronLeft size={30} />
       </div>
 
       {/* Right Arrow */}
-      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer hover:bg-black/40 transition-colors">
-        <ChevronRight onClick={nextSlide} size={30} />
+      <div
+        onClick={nextSlide}
+        className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer hover:bg-black/40 transition-colors z-10"
+      >
+        <ChevronRight size={30} />
       </div>
 
       {/* Dots */}

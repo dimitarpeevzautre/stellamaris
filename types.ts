@@ -25,6 +25,16 @@ export interface Litter {
   gallery?: string[];
 }
 
+export interface AvailablePuppy {
+  id: string;
+  name: string;
+  litterId: string;
+  gender: 'Male' | 'Female';
+  color: string;
+  description: string;
+  images: string[];
+}
+
 export interface ChatMessage {
   role: 'user' | 'model';
   text: string;

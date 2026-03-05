@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { LITTERS } from '../constants';
+import { LITTERS, AVAILABLE_PUPPIES } from '../constants';
 import { Calendar, Baby, Info } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ImageCarousel from '../components/ImageCarousel';
@@ -121,6 +121,57 @@ const Puppies: React.FC = () => {
                         {t('puppies.subtitle')}
                     </p>
                 </div>
+
+                {/* Available Puppies Section */}
+                {AVAILABLE_PUPPIES && AVAILABLE_PUPPIES.length > 0 && (
+                    <div className="mb-24">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-stella-gold/50"></div>
+                            <h2 className="text-3xl font-serif font-bold text-stella-blue uppercase tracking-widest">{t('puppies.available_title')}</h2>
+                            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-stella-gold/50"></div>
+                        </div>
+                        <p className="text-center text-gray-500 mb-12 max-w-2xl mx-auto">{t('puppies.available_subtitle')}</p>
+
+                        <div className="grid grid-cols-1 gap-12">
+                            {AVAILABLE_PUPPIES.map((puppy, index) => (
+                                <div key={puppy.id} className="bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group">
+                                    <div className={`flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                                        <div className="md:w-1/2 min-h-[400px] md:h-auto relative overflow-hidden">
+                                            {puppy.images.length > 0 ? (
+                                                <div className="h-full w-full absolute inset-0">
+                                                    <ImageCarousel images={puppy.images} altTexts={puppy.images.map((_, i) => `${puppy.name} - ${i + 1}`)} className="h-full w-full object-cover" adaptiveHeight={false} />
+                                                </div>
+                                            ) : (
+                                                <div className="absolute inset-0 bg-gray-50 flex items-center justify-center text-gray-400">No Image</div>
+                                            )}
+                                        </div>
+                                        <div className="p-10 md:p-14 md:w-1/2 flex flex-col justify-center bg-gradient-to-br from-white to-orange-50/30">
+                                            <div className="mb-6 inline-block">
+                                                <span className="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest bg-green-500 text-white shadow-md shadow-green-500/20">
+                                                    {t('puppies.status.available')}
+                                                </span>
+                                            </div>
+                                            <h3 className="text-4xl font-serif font-bold text-stella-blue mb-4 leading-tight group-hover:text-stella-gold transition-colors duration-300">{puppy.name}</h3>
+                                            <div className="flex items-center gap-3 mb-8">
+                                                <span className="px-3 py-1 bg-stella-blue/5 text-stella-blue text-sm font-semibold rounded-lg">{puppy.gender}</span>
+                                                <span className="w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+                                                <span className="text-gray-500 font-medium">{puppy.color}</span>
+                                            </div>
+                                            <p className="text-gray-600 leading-relaxed mb-10 text-lg">
+                                                {puppy.description}
+                                            </p>
+                                            <div>
+                                                <Link to="/contact" className="inline-flex items-center justify-center w-full sm:w-auto text-center bg-stella-blue hover:bg-stella-dark text-white font-bold py-4 px-10 rounded-xl transition duration-300 shadow-lg shadow-stella-blue/30 hover:shadow-stella-blue/50 hover:-translate-y-1">
+                                                    {t('puppies.inquire')}
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
 
                 <div className="space-y-12 mb-24">
                     {translatedLitters.map((litter) => (

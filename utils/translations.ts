@@ -92,6 +92,8 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
         puppies: {
             title: 'Puppies',
             subtitle: 'We plan our litters carefully with a focus on betterment of the breed. Below are our current and upcoming opportunities to welcome a Stella Maris puppy into your home.',
+            available_title: 'Available Puppies',
+            available_subtitle: 'Meet our currently available puppies looking for their forever homes.',
             map_title: 'Stella Maris Around the World',
             map_subtitle: 'Our puppies have found loving homes across Europe and beyond.',
             expecting: 'Expecting',
@@ -245,6 +247,8 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
         puppies: {
             title: 'Кучила',
             subtitle: 'Планираме кучилата си внимателно с фокус върху подобряването на породата. По-долу са нашите настоящи и предстоящи възможности да посрещнете кученце от Stella Maris във вашия дом.',
+            available_title: 'Свободни Кученца',
+            available_subtitle: 'Запознайте се с нашите свободни кученца, които търсят своите завинаги домове.',
             map_title: 'Stella Maris по света',
             map_subtitle: 'Нашите кученца са намерили любящи домове в Европа и отвъд.',
             expecting: 'Очакваме',
