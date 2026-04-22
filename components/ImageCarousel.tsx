@@ -9,6 +9,8 @@ interface ImageCarouselProps {
   adaptiveHeight?: boolean;
 }
 
+const toWebp = (src: string) => src.replace(/\.(jpe?g|png)$/i, '.webp');
+
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, altTexts, className = "", adaptiveHeight = false }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -30,20 +32,28 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, altTexts, classNa
 
   if (!images || images.length === 0) return null;
 
+  const currentSrc = images[currentIndex];
+  const currentAlt = altTexts?.[currentIndex] || `Photo from Stella Maris Kennel`;
+
   return (
     <div className={`relative group w-full ${className}`}>
       {adaptiveHeight ? (
-        <img
-          src={images[currentIndex]}
-          alt={altTexts?.[currentIndex] || `Photo from Stella Maris Kennel`}
-          className="w-full h-auto object-contain rounded-2xl shadow-md duration-500 ease-in-out transition-all block"
-        />
+        <picture>
+          <source type="image/webp" srcSet={toWebp(currentSrc)} />
+          <img
+            src={currentSrc}
+            alt={currentAlt}
+            loading={currentIndex === 0 ? 'eager' : 'lazy'}
+            decoding="async"
+            className="w-full h-auto object-contain rounded-2xl shadow-md duration-500 ease-in-out transition-all block"
+          />
+        </picture>
       ) : (
         <div
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500 ease-in-out transition-all shadow-md"
-          style={{ backgroundImage: `url("${images[currentIndex]}")` }}
+          style={{ backgroundImage: `url("${toWebp(currentSrc)}")` }}
           role="img"
-          aria-label={altTexts?.[currentIndex] || `Photo from Stella Maris Kennel`}
+          aria-label={currentAlt}
         ></div>
       )}
 

@@ -4,14 +4,15 @@ import { LITTERS, AVAILABLE_PUPPIES } from '../constants';
 import { Calendar, Baby, Info } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ImageCarousel from '../components/ImageCarousel';
-import L from 'leaflet';
+import Picture from '../components/Picture';
+import type { Map as LeafletMap } from 'leaflet';
 
 import { useLanguage } from '../context/LanguageContext';
 
 const PuppyLocationMap = () => {
     const { t } = useLanguage();
     const mapContainerRef = useRef<HTMLDivElement>(null);
-    const mapInstanceRef = useRef<L.Map | null>(null);
+    const mapInstanceRef = useRef<LeafletMap | null>(null);
 
     const locations = [
         { id: 1, country: t('puppies.locations.portugal'), count: 2, lat: 39.3999, lng: -8.2245 },
@@ -22,24 +23,28 @@ const PuppyLocationMap = () => {
 
     useEffect(() => {
         if (!mapContainerRef.current) return;
+        let cancelled = false;
 
-        // Initialize map if not already initialized
-        if (!mapInstanceRef.current) {
+        (async () => {
+            const [{ default: L }] = await Promise.all([
+                import('leaflet'),
+                import('leaflet/dist/leaflet.css'),
+            ]);
+            if (cancelled || !mapContainerRef.current || mapInstanceRef.current) return;
+
             const map = L.map(mapContainerRef.current, {
-                center: [46, 10], // Centered roughly on Europe
+                center: [46, 10],
                 zoom: 4,
                 scrollWheelZoom: false,
                 attributionControl: false
             });
 
-            // Add CartoDB Positron tile layer (light theme matching the site)
             L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
                 subdomains: 'abcd',
                 maxZoom: 19
             }).addTo(map);
 
-            // Add markers
             locations.forEach((loc) => {
                 const icon = L.divIcon({
                     className: 'bg-transparent',
@@ -67,10 +72,10 @@ const PuppyLocationMap = () => {
             });
 
             mapInstanceRef.current = map;
-        }
+        })();
 
-        // Cleanup on unmount
         return () => {
+            cancelled = true;
             if (mapInstanceRef.current) {
                 mapInstanceRef.current.remove();
                 mapInstanceRef.current = null;
@@ -178,7 +183,7 @@ const Puppies: React.FC = () => {
                         <div key={litter.id} className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div className="flex flex-col md:flex-row">
                                 <div className="md:w-2/5 min-h-[300px] md:h-auto relative">
-                                    <img src={litter.image} alt={`${litter.sire} x ${litter.dam} — ${t('puppies.litter_alt')} — ${litter.puppiesCount}`} className="absolute inset-0 w-full h-full object-cover" />
+                                    <Picture src={litter.image} alt={`${litter.sire} x ${litter.dam} — ${t('puppies.litter_alt')} — ${litter.puppiesCount}`} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
                                     <div className="absolute top-4 left-4">
                                         <span className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-md
                                         ${litter.status === 'Available' ? 'bg-green-500 text-white' :

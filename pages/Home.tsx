@@ -51,7 +51,7 @@ const Home: React.FC = () => {
         {/* Background Image: High-quality PWD in a garden/nature setting, matching the breeder's photo vibe */}
         <div
           className="absolute inset-0 bg-cover bg-left md:bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url("/images/puppies.jpg")' }}
+          style={{ backgroundImage: 'url("/images/puppies.webp")' }}
         >
           {/* Subtle overlay to ensure text readability */}
           <div className="absolute inset-0 bg-black/35"></div>
@@ -127,7 +127,7 @@ const Home: React.FC = () => {
         {/* Decorative Background */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: 'url("/images/steliandpuppy.jpg")' }}
+          style={{ backgroundImage: 'url("/images/steliandpuppy.webp")' }}
         ></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
