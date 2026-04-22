@@ -115,6 +115,11 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
+                <label className="block text-xs font-bold uppercase text-gray-500 mb-2 tracking-wide">{t('contact.phone')} <span className="text-gray-400 normal-case font-normal">({t('contact.optional')})</span></label>
+                <input type="tel" name="phone" autoComplete="tel" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:border-stella-gold focus:ring-0 outline-none transition" />
+              </div>
+
+              <div>
                 <label className="block text-xs font-bold uppercase text-gray-500 mb-2 tracking-wide">{t('contact.interest')}</label>
                 <select name="interest" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:border-stella-gold focus:ring-0 outline-none transition">
                   <option>General Inquiry</option>
