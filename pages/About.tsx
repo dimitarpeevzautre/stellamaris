@@ -16,11 +16,17 @@ const About: React.FC = () => {
         </div>
 
         <div className="bg-white shadow-sm border border-gray-100 overflow-hidden mb-16">
-          <img
-            src="/images/family.jpeg"
-            alt={t('about.family_photo_alt')}
-            className="w-full h-auto"
-          />
+          <picture>
+            <source type="image/webp" srcSet="/images/family.webp" />
+            <img
+              src="/images/family.jpeg"
+              alt={t('about.family_photo_alt')}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+              className="w-full h-auto"
+            />
+          </picture>
           <div className="p-8 sm:p-16 space-y-6">
             <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
               {t('about.story_p1')}

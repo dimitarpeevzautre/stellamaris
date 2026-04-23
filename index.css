@@ -1,1 +1,21 @@
-/* Basic styles - managed by Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bg-hero-puppies {
+    background-image: url("/images/puppies.jpg");
+    background-image: image-set(
+      url("/images/puppies.webp") type("image/webp"),
+      url("/images/puppies.jpg") type("image/jpeg")
+    );
+  }
+
+  .bg-testimonials-stelipuppy {
+    background-image: url("/images/steliandpuppy.jpg");
+    background-image: image-set(
+      url("/images/steliandpuppy.webp") type("image/webp"),
+      url("/images/steliandpuppy.jpg") type("image/jpeg")
+    );
+  }
+}

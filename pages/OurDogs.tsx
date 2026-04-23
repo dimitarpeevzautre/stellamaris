@@ -1,6 +1,7 @@
 import React from 'react';
 import { DOGS } from '../constants';
 import { Award, ShieldCheck, Calendar, Info, Trophy } from 'lucide-react';
+import Picture from '../components/Picture';
 
 import { useLanguage } from '../context/LanguageContext';
 
@@ -34,9 +35,11 @@ const OurDogs: React.FC = () => {
                         <div className="lg:w-1/2 relative">
                             <div className="absolute inset-0 bg-stella-gold translate-x-4 translate-y-4 opacity-10 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-500"></div>
                             <div className="relative overflow-hidden aspect-[4/5] shadow-2xl">
-                                <img
+                                <Picture
                                     src={male.image}
                                     alt={`${male.name} — ${male.registeredName}, ${t('dogs.sire_alt')}`}
+                                    loading="eager"
+                                    decoding="async"
                                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
@@ -93,9 +96,11 @@ const OurDogs: React.FC = () => {
                         <div className="lg:w-1/2 relative">
                             <div className="absolute inset-0 bg-stella-gold -translate-x-4 translate-y-4 opacity-10 group-hover:-translate-x-6 group-hover:translate-y-6 transition-transform duration-500"></div>
                             <div className="relative overflow-hidden aspect-[4/5] shadow-2xl">
-                                <img
+                                <Picture
                                     src={female.image}
                                     alt={`${female.name} — ${female.registeredName}, ${t('dogs.dam_alt')}`}
+                                    loading="eager"
+                                    decoding="async"
                                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
