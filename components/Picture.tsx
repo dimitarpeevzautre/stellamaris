@@ -5,14 +5,18 @@ interface PictureProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   alt: string;
 }
 
-const toWebp = (src: string) => src.replace(/\.(jpe?g|png)$/i, '.webp');
+const toWebpSrcSet = (src: string) =>
+  src.replace(/\.(jpe?g|png)$/i, '.webp')
+    .replace(/ /g, '%20')
+    .replace(/\(/g, '%28')
+    .replace(/\)/g, '%29');
 
 const Picture: React.FC<PictureProps> = ({ src, alt, ...imgProps }) => {
-  const webp = toWebp(src);
-  const hasWebp = webp !== src;
+  const srcSet = toWebpSrcSet(src);
+  const hasWebp = /\.(jpe?g|png)$/i.test(src);
   return (
-    <picture style={{ display: 'contents' }}>
-      {hasWebp && <source type="image/webp" srcSet={webp} />}
+    <picture style={{ display: 'block', width: '100%', height: '100%' }}>
+      {hasWebp && <source type="image/webp" srcSet={srcSet} />}
       <img src={src} alt={alt} {...imgProps} />
     </picture>
   );

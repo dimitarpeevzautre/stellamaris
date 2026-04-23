@@ -38,7 +38,7 @@ const OurDogs: React.FC = () => {
                                 <Picture
                                     src={male.image}
                                     alt={`${male.name} — ${male.registeredName}, ${t('dogs.sire_alt')}`}
-                                    loading="lazy"
+                                    loading="eager"
                                     decoding="async"
                                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                                 />
@@ -99,7 +99,7 @@ const OurDogs: React.FC = () => {
                                 <Picture
                                     src={female.image}
                                     alt={`${female.name} — ${female.registeredName}, ${t('dogs.dam_alt')}`}
-                                    loading="lazy"
+                                    loading="eager"
                                     decoding="async"
                                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                                 />

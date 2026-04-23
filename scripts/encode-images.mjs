@@ -31,13 +31,10 @@ async function encode(src) {
   }
 
   const image = sharp(src, { failOn: 'none' });
-  const meta = await image.metadata();
-  const longest = Math.max(meta.width ?? 0, meta.height ?? 0);
-  const pipeline = longest > MAX_EDGE
-    ? image.resize({ width: meta.width >= meta.height ? MAX_EDGE : undefined, height: meta.height > meta.width ? MAX_EDGE : undefined, withoutEnlargement: true })
-    : image;
-
-  await pipeline.webp({ quality: QUALITY }).toFile(dest);
+  await image
+    .resize(MAX_EDGE, MAX_EDGE, { fit: 'inside', withoutEnlargement: true })
+    .webp({ quality: QUALITY })
+    .toFile(dest);
   return { src, dest, skipped: false };
 }
 

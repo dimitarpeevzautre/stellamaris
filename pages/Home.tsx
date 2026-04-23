@@ -50,8 +50,7 @@ const Home: React.FC = () => {
       <div className="relative h-[85vh] w-full overflow-hidden">
         {/* Background Image: High-quality PWD in a garden/nature setting, matching the breeder's photo vibe */}
         <div
-          className="absolute inset-0 bg-cover bg-left md:bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url("/images/puppies.webp")' }}
+          className="absolute inset-0 bg-cover bg-left md:bg-center bg-no-repeat bg-hero-puppies"
         >
           {/* Subtle overlay to ensure text readability */}
           <div className="absolute inset-0 bg-black/35"></div>
@@ -126,8 +125,7 @@ const Home: React.FC = () => {
       <section className="py-24 bg-gray-900 text-white relative overflow-hidden">
         {/* Decorative Background */}
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: 'url("/images/steliandpuppy.webp")' }}
+          className="absolute inset-0 bg-cover bg-center opacity-20 bg-testimonials-stelipuppy"
         ></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
