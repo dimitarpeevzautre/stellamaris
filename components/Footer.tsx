@@ -1,6 +1,7 @@
 import React from 'react';
 import { Facebook, Instagram, Mail, Phone } from 'lucide-react';
-import { CONTACT_EMAIL, CONTACT_PHONE, SOCIAL_FACEBOOK, SOCIAL_INSTAGRAM } from '../constants';
+import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_WHATSAPP, SOCIAL_FACEBOOK, SOCIAL_INSTAGRAM } from '../constants';
+import WhatsAppIcon from './WhatsAppIcon';
 
 import { useLanguage } from '../context/LanguageContext';
 
@@ -32,6 +33,13 @@ const Footer: React.FC = () => {
               <Phone className="w-5 h-5 mr-3 text-gray-500 group-hover:text-stella-gold transition-colors" />
               <a href={`tel:${CONTACT_PHONE}`} className="text-sm font-medium text-stella-dark hover:text-stella-gold transition-colors">
                 {CONTACT_PHONE}
+              </a>
+            </div>
+
+            <div className="flex items-center group">
+              <WhatsAppIcon className="w-5 h-5 mr-3 text-gray-500 group-hover:text-stella-gold transition-colors" />
+              <a href={CONTACT_WHATSAPP} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-stella-dark hover:text-stella-gold transition-colors">
+                {t('contact.whatsapp_chat')}
               </a>
             </div>
 

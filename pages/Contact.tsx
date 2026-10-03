@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Loader2 } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
-import { CONTACT_EMAIL, CONTACT_PHONE } from '../constants';
+import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_WHATSAPP } from '../constants';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import { useLanguage } from '../context/LanguageContext';
 
 const Contact: React.FC = () => {
@@ -80,8 +81,15 @@ const Contact: React.FC = () => {
                   <Phone className="text-stella-gold mt-1 mr-6" strokeWidth={1.5} />
                   <div>
                     <p className="font-serif text-lg text-gray-800">{t('contact.phone')}</p>
-                    <p className="text-gray-600">{CONTACT_PHONE}</p>
+                    <a href={`tel:${CONTACT_PHONE}`} className="text-gray-600 hover:text-stella-gold transition-colors">{CONTACT_PHONE}</a>
                     <p className="text-xs text-gray-400">Mon-Fri, 9am - 5pm CET</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <WhatsAppIcon className="w-6 h-6 text-stella-gold mt-1 mr-6 flex-shrink-0" />
+                  <div>
+                    <p className="font-serif text-lg text-gray-800">WhatsApp</p>
+                    <a href={CONTACT_WHATSAPP} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-stella-gold transition-colors">{t('contact.whatsapp_chat')}</a>
                   </div>
                 </div>
                 <div className="flex items-start">

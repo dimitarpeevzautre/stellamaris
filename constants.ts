@@ -4,6 +4,7 @@ export const SITE_NAME = "Stella Maris Kennel";
 export const TAGLINE = "Breeding quality PWD (Portuguese Water Dog) dogs since 2005.";
 export const CONTACT_EMAIL = "hello@stellamaris.dog";
 export const CONTACT_PHONE = "+359 897 014 015";
+export const CONTACT_WHATSAPP = `https://wa.me/${CONTACT_PHONE.replace(/\D/g, '')}`;
 export const SOCIAL_FACEBOOK = "https://www.facebook.com/portuguesewaterdogbulgaria/";
 export const SOCIAL_INSTAGRAM = "https://www.instagram.com/pwdbulgaria";
 
