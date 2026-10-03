@@ -6,6 +6,8 @@ export const translations = {
             our_dogs: 'OUR DOGS',
             puppies: 'PUPPIES',
             contact: 'CONTACT',
+            top_announcement: 'Upcoming litter expected in January 2027 - ',
+            join_waitlist: 'Join the Waitlist!',
             subtitle: 'KENNEL'
         },
         home: {
@@ -93,7 +95,7 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
             available_title: 'Available Puppies',
             available_subtitle: 'Meet our currently available puppies looking for their forever homes.',
             none_available_title: 'No Puppies Available Right Now',
-            none_available_desc: 'All of our puppies have found their forever homes. Join our waitlist and we will let you know as soon as our next litter is planned.',
+            none_available_desc: 'All of our puppies have found their forever homes. Our next litter is expected in January 2027 - join our waitlist and we will keep you updated.',
             join_waitlist: 'Join the Waitlist',
             map_title: 'Stella Maris Around the World',
             map_subtitle: 'Our puppies have found loving homes across Europe and beyond.',
@@ -170,6 +172,8 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
             our_dogs: 'НАШИТЕ КУЧЕТА',
             puppies: 'КУЧИЛА',
             contact: 'КОНТАКТИ',
+            top_announcement: 'Очакваме ново кучило през януари 2027 г. - ',
+            join_waitlist: 'Запишете се в списъка на чакащи!',
             subtitle: 'РАЗВЪДНИК'
         },
         home: {
@@ -257,7 +261,7 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
             available_title: 'Свободни Кученца',
             available_subtitle: 'Запознайте се с нашите свободни кученца, които търсят своите завинаги домове.',
             none_available_title: 'В момента нямаме свободни кученца',
-            none_available_desc: 'Всички наши кученца вече намериха своите нови семейства. Запишете се в нашия списък на чакащи и ще ви уведомим веднага щом планираме следващото кучило.',
+            none_available_desc: 'Всички наши кученца вече намериха своите нови семейства. Следващото ни кучило се очаква през януари 2027 г. - запишете се в нашия списък на чакащи и ще ви държим в течение.',
             join_waitlist: 'Запишете се в списъка на чакащи',
             map_title: 'Stella Maris по света',
             map_subtitle: 'Нашите кученца са намерили любящи домове в Европа и отвъд.',
