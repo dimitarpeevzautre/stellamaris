@@ -20,6 +20,11 @@ const Navigation: React.FC = () => {
 
   return (
     <>
+      {/* Top Announcement Bar */}
+      <div className="bg-slate-700 text-white text-xs sm:text-sm text-center py-2 px-4 tracking-wide">
+        {t('nav.top_announcement')} <Link to="/contact?interest=waitlist" className="underline hover:text-stella-gold">{t('nav.join_waitlist')}</Link>
+      </div>
+
       <nav className="bg-stella-cream sticky top-0 z-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
