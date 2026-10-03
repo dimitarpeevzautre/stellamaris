@@ -122,7 +122,7 @@ export const LITTERS: Litter[] = [
     dam: 'Riva Rosa',
     whelpDate: '2025-12-25',
     goHomeDate: '2026-03-01',
-    status: 'Available',
+    status: 'Sold Out',
     puppiesCount: 9,
     description: 'The Kings litter. Riva gave birth on the 25th of December of 9 healthy strong boys. 8 of them are brown, what are the chances?',
     image: '/images/kings.png',
@@ -134,47 +134,4 @@ export const LITTERS: Litter[] = [
   }
 ];
 
-export const AVAILABLE_PUPPIES: AvailablePuppy[] = [
-  {
-    id: 'baron-bold',
-    name: 'Baron Bold Stella Maris',
-    litterId: 'litter-2025-december',
-    gender: 'Male',
-    color: 'Chocolate Brown with White Chest',
-    description: "Born on christmas day under the glow of candlelight and soothing soothing sound of mantras, this little soul is truly a gift. he is one of our eight rare brown boys - a beautiful manifestation of nature's magic. his coat is a deep, rich chocolate, accented by a perfect placed white patch on his chest that looks like a badge of light. while his brothers might be resting, this boy is already ready looking for his next big adventure. after 16 months of waiting for this litter, he has reminded us they nature isn't just peaceful - it's full of life, fire and fun! He is looking for a family who can match his zest for life and give him all the love (and activity) he craves.",
-    images: [
-      '/images/baron/Portuguese-Water-Dog-for-sale-in-Sofia-Baron-Bold-Stella-Maris-03-05-2026_03_16_PM.png',
-      '/images/baron/Portuguese-Water-Dog-for-sale-in-Sofia-Baron-Bold-Stella-Maris-03-05-2026_03_17_PM (1).png',
-      '/images/baron/Portuguese-Water-Dog-for-sale-in-Sofia-Baron-Bold-Stella-Maris-03-05-2026_03_17_PM (2).png',
-      '/images/baron/Portuguese-Water-Dog-for-sale-in-Sofia-Baron-Bold-Stella-Maris-03-05-2026_03_17_PM.png'
-    ]
-  },
-  {
-    id: 'balthazar-royal',
-    name: 'Balthazar Royal Black Stella Maris',
-    litterId: 'litter-2025-december',
-    gender: 'Male',
-    color: 'Solid Black',
-    description: "Sometimes, nature repeats perfection. Out of our special christmas litter of nine, this striking black boy is the mirror image of his father, international multi-champion arthy. carrying the silhouette and the commanding presence of a sire decorated across 6 different countries, this puppy is more than just a pet—he is a legacy. While his brothers surprised us with their rare brown coats, this boy stands out with his deep, ink-black curls and the unmistakable 'champion spark' in his eyes. He carries himself with a natural confidence and balance that only comes from world-class bloodlines. raised with the same devotion, mantras, and love as his brothers, he is the perfect blend of elite genetics and a soulful upbringing. He is a magnificent choice for someone who appreciates the history of the portuguese water dog breed and is looking for a companion with the heart—and the looks—of a true champion.",
-    images: [
-      '/images/balthazar/Portuguese-Water-Dog-for-sale-in-Sofia-Balthazar-Royal-Black-Stella-Maris-03-05-2026_03_29_PM (1).png',
-      '/images/balthazar/Portuguese-Water-Dog-for-sale-in-Sofia-Balthazar-Royal-Black-Stella-Maris-03-05-2026_03_29_PM (2).png',
-      '/images/balthazar/Portuguese-Water-Dog-for-sale-in-Sofia-Balthazar-Royal-Black-Stella-Maris-03-05-2026_03_29_PM.png',
-      '/images/balthazar/Portuguese-Water-Dog-for-sale-in-Sofia-Balthazar-Royal-Black-Stella-Maris-03-05-2026_03_30_PM (1).png',
-      '/images/balthazar/Portuguese-Water-Dog-for-sale-in-Sofia-Balthazar-Royal-Black-Stella-Maris-03-05-2026_03_30_PM.png'
-    ]
-  },
-  {
-    id: 'bohemian-rhapsody',
-    name: 'Bohemian Rhapsody Stella Maris',
-    litterId: 'litter-2025-december',
-    gender: 'Male',
-    color: 'Solid Brown',
-    description: "Looking for a partner for life's adventures? This stunning brown boy is ready to steal your heart. with his deep green eyes he can stole every heart, he is as handsome as he is sweet. as a portuguese water dog, he is born for connection. he is curious, brave, and already showing a wonderful temperament. raised in a home full of love (and three daughters), he is being socialized to be perfect family companion. he isn't just a puppy, he is a christmas miracle waiting to bring joy to his forever home.",
-    images: [
-      '/images/bohemian/Portuguese-Water-Dog-for-sale-in-Sofia-Bohemian-Rhapsody-Stella-Maris-03-05-2026_03_58_PM (1).png',
-      '/images/bohemian/Portuguese-Water-Dog-for-sale-in-Sofia-Bohemian-Rhapsody-Stella-Maris-03-05-2026_03_58_PM (2).png',
-      '/images/bohemian/Portuguese-Water-Dog-for-sale-in-Sofia-Bohemian-Rhapsody-Stella-Maris-03-05-2026_03_58_PM.png'
-    ]
-  }
-];
+export const AVAILABLE_PUPPIES: AvailablePuppy[] = [];

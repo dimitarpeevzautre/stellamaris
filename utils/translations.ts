@@ -6,8 +6,6 @@ export const translations = {
             our_dogs: 'OUR DOGS',
             puppies: 'PUPPIES',
             contact: 'CONTACT',
-            top_announcement: 'Puppies available from Kings litter of December 2025 - ',
-            reserve_now: 'Reserve Now!',
             subtitle: 'KENNEL'
         },
         home: {
@@ -91,9 +89,12 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
         },
         puppies: {
             title: 'Puppies',
-            subtitle: 'We plan our litters carefully with a focus on betterment of the breed. Below are our current and upcoming opportunities to welcome a Stella Maris puppy into your home.',
+            subtitle: 'We plan our litters carefully with a focus on betterment of the breed. Here you can follow our litters and learn how to welcome a Stella Maris puppy into your home.',
             available_title: 'Available Puppies',
             available_subtitle: 'Meet our currently available puppies looking for their forever homes.',
+            none_available_title: 'No Puppies Available Right Now',
+            none_available_desc: 'All of our puppies have found their forever homes. Join our waitlist and we will let you know as soon as our next litter is planned.',
+            join_waitlist: 'Join the Waitlist',
             map_title: 'Stella Maris Around the World',
             map_subtitle: 'Our puppies have found loving homes across Europe and beyond.',
             expecting: 'Expecting',
@@ -115,7 +116,9 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
             status: {
                 available: 'Available',
                 planned: 'Planned',
-                reserved: 'Reserved'
+                born: 'Born',
+                reserved: 'Reserved',
+                sold_out: 'All Homed'
             },
             locations: {
                 portugal: 'Portugal',
@@ -142,6 +145,11 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
             last_name: 'Last Name',
             message: 'Message',
             interest: 'Interest',
+            interest_options: {
+                general: 'General Inquiry',
+                waitlist: 'Puppy Waitlist',
+                stud: 'Stud Service'
+            },
             optional: 'Optional',
             send: 'Send Message',
             sending: 'Sending...',
@@ -162,8 +170,6 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
             our_dogs: 'НАШИТЕ КУЧЕТА',
             puppies: 'КУЧИЛА',
             contact: 'КОНТАКТИ',
-            top_announcement: 'Предлагаме кученца от кучило King - декември 2025 - ',
-            reserve_now: 'Запазете сега!',
             subtitle: 'РАЗВЪДНИК'
         },
         home: {
@@ -247,9 +253,12 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
         },
         puppies: {
             title: 'Кучила',
-            subtitle: 'Планираме кучилата си внимателно с фокус върху подобряването на породата. По-долу са нашите настоящи и предстоящи възможности да посрещнете кученце от Stella Maris във вашия дом.',
+            subtitle: 'Планираме кучилата си внимателно с фокус върху подобряването на породата. Тук можете да следите нашите кучила и да научите как да посрещнете кученце от Stella Maris във вашия дом.',
             available_title: 'Свободни Кученца',
             available_subtitle: 'Запознайте се с нашите свободни кученца, които търсят своите завинаги домове.',
+            none_available_title: 'В момента нямаме свободни кученца',
+            none_available_desc: 'Всички наши кученца вече намериха своите нови семейства. Запишете се в нашия списък на чакащи и ще ви уведомим веднага щом планираме следващото кучило.',
+            join_waitlist: 'Запишете се в списъка на чакащи',
             map_title: 'Stella Maris по света',
             map_subtitle: 'Нашите кученца са намерили любящи домове в Европа и отвъд.',
             expecting: 'Очакваме',
@@ -271,7 +280,9 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
             status: {
                 available: 'Свободно',
                 planned: 'Планирано',
-                reserved: 'Запазено'
+                born: 'Родени',
+                reserved: 'Запазено',
+                sold_out: 'Всички намериха дом'
             },
             locations: {
                 portugal: 'Португалия',
@@ -298,6 +309,11 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
             last_name: 'Фамилия',
             message: 'Съобщение',
             interest: 'Интерес',
+            interest_options: {
+                general: 'Общо запитване',
+                waitlist: 'Списък на чакащи за кученце',
+                stud: 'Услуга за разплод'
+            },
             optional: 'По избор',
             send: 'Изпрати съобщение',
             sending: 'Изпращане...',
