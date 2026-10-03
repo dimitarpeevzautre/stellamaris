@@ -71,16 +71,16 @@ const Home: React.FC = () => {
             <p className="text-lg md:text-xl font-light mb-8 drop-shadow-md opacity-95 leading-relaxed max-w-2xl">
               {t('home.hero_desc')}
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
               <Link
-                to="/puppies"
-                className="bg-stella-gold hover:bg-[#b8952b] text-stella-dark font-sans text-xs font-bold tracking-widest py-4 px-10 uppercase transition-all duration-300 inline-block shadow-lg"
+                to="/contact?interest=waitlist"
+                className="bg-stella-gold hover:bg-[#b8952b] text-stella-dark font-sans text-xs font-bold tracking-widest py-4 px-6 sm:px-10 uppercase text-center transition-all duration-300 inline-block shadow-lg"
               >
-                {t('home.view_puppies')}
+                {t('home.puppy_inquiry')}
               </Link>
               <Link
                 to="/about"
-                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-sans text-xs font-bold tracking-widest py-4 px-10 uppercase transition-all duration-300 inline-block shadow-lg border border-white/30"
+                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-sans text-xs font-bold tracking-widest py-4 px-6 sm:px-10 uppercase text-center transition-all duration-300 inline-block shadow-lg border border-white/30"
               >
                 {t('home.our_story')}
               </Link>
