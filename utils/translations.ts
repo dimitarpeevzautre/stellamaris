@@ -13,7 +13,7 @@ export const translations = {
         home: {
             hero_title: 'Breeding Quality \nPortuguese Water Dogs',
             hero_desc: "At Stella Maris, we're a community of passionate dog lovers. We connect people with their perfect canine companions, provide expert advice and training resources, and foster a shared love for all things dog.",
-            view_puppies: 'VIEW PUPPIES',
+            puppy_inquiry: 'PUPPY INQUIRY',
             our_story: 'OUR STORY',
             features_title: 'What sets us apart',
             happy_families: 'Happy Families',
@@ -179,7 +179,7 @@ Riva is a true advocate for her breed, balancing her life at home with a meaning
         home: {
             hero_title: 'Развъждане на качествени \nПортугалски водни кучета',
             hero_desc: 'В Stella Maris ние сме общност от страстни любители на кучета. Свързваме хората с техните перфектни кучешки спътници, предоставяме експертни съвети и ресурси за обучение и подкрепяме споделената любов към всичко свързано с кучетата.',
-            view_puppies: 'ВИЖ КУЧИЛАТА',
+            puppy_inquiry: 'ЗАПИТВАНЕ ЗА КУЧЕНЦЕ',
             our_story: 'НАШАТА ИСТОРИЯ',
             features_title: 'Какво ни отличава',
             happy_families: 'Щастливи семейства',
