@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Loader2 } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '../constants';
 import { useLanguage } from '../context/LanguageContext';
 
 const Contact: React.FC = () => {
   const { t } = useLanguage();
+  const [searchParams] = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -121,10 +123,10 @@ const Contact: React.FC = () => {
 
               <div>
                 <label className="block text-xs font-bold uppercase text-gray-500 mb-2 tracking-wide">{t('contact.interest')}</label>
-                <select name="interest" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:border-stella-gold focus:ring-0 outline-none transition">
-                  <option>General Inquiry</option>
-                  <option>Kings Litter (Dec 2025)</option>
-                  <option>Stud Service</option>
+                <select name="interest" defaultValue={searchParams.get('interest') === 'waitlist' ? 'Puppy Waitlist' : 'General Inquiry'} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:border-stella-gold focus:ring-0 outline-none transition">
+                  <option value="General Inquiry">{t('contact.interest_options.general')}</option>
+                  <option value="Puppy Waitlist">{t('contact.interest_options.waitlist')}</option>
+                  <option value="Stud Service">{t('contact.interest_options.stud')}</option>
                 </select>
               </div>
 

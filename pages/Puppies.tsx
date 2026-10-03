@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { LITTERS, AVAILABLE_PUPPIES } from '../constants';
-import { Calendar, Baby, Info } from 'lucide-react';
+import { Calendar, Baby, Info, PawPrint } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ImageCarousel from '../components/ImageCarousel';
 import Picture from '../components/Picture';
@@ -109,13 +109,81 @@ const PuppyLocationMap = () => {
 };
 
 const Puppies: React.FC = () => {
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
 
     const translatedLitters = LITTERS.map(litter => ({
         ...litter,
         description: litter.id === 'litter-2025-december' ? t('puppies.litters.kings.description') : litter.description,
-        statusText: t(`puppies.status.${litter.status.toLowerCase()}` as any)
+        statusText: t(`puppies.status.${litter.status.toLowerCase().replace(/ /g, '_')}`),
+        whelpMonth: new Date(litter.whelpDate).toLocaleDateString(language === 'bg' ? 'bg-BG' : 'en-GB', { month: 'long', year: 'numeric' })
     }));
+    const currentLitters = translatedLitters.filter(litter => litter.status !== 'Sold Out');
+    const pastLitters = translatedLitters.filter(litter => litter.status === 'Sold Out');
+    const hasAvailability = AVAILABLE_PUPPIES.length > 0 || currentLitters.length > 0;
+
+    const renderLitter = (litter: typeof translatedLitters[number]) => (
+        <div key={litter.id} className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="flex flex-col md:flex-row">
+                <div className="md:w-2/5 min-h-[300px] md:h-auto relative">
+                    <Picture src={litter.image} alt={`${litter.sire} x ${litter.dam} — ${t('puppies.litter_alt')} — ${litter.puppiesCount}`} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute top-4 left-4">
+                        <span className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-md
+                        ${litter.status === 'Available' ? 'bg-green-500 text-white' :
+                                litter.status === 'Planned' ? 'bg-blue-500 text-white' : 'bg-gray-500 text-white'}`}>
+                            {litter.statusText}
+                        </span>
+                    </div>
+                </div>
+                <div className="p-8 md:w-3/5 flex flex-col justify-center">
+                    <h2 className="text-3xl font-serif font-bold text-stella-blue mb-2">
+                        {litter.sire} x {litter.dam}
+                    </h2>
+                    <p className="text-gray-500 text-sm mb-6 uppercase tracking-wide">
+                        {litter.status === 'Planned' ? t('puppies.expecting') : t('puppies.arrived')} {litter.whelpMonth}
+                    </p>
+
+                    <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+                        {litter.description}
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div className="flex items-center text-gray-600 bg-gray-50 p-3 rounded-lg">
+                            <Calendar className="mr-3 text-stella-gold" size={20} />
+                            <div>
+                                <p className="text-xs text-gray-400 font-bold uppercase">{t('puppies.whelp_date')}</p>
+                                <p className="font-medium">{litter.whelpDate}</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center text-gray-600 bg-gray-50 p-3 rounded-lg">
+                            <Baby className="mr-3 text-stella-gold" size={20} />
+                            <div>
+                                <p className="text-xs text-gray-400 font-bold uppercase">{t('puppies.go_home_date')}</p>
+                                <p className="font-medium">{litter.goHomeDate}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {litter.status !== 'Sold Out' && (
+                        <div>
+                            <Link to="/contact" className="inline-block w-full sm:w-auto text-center bg-stella-blue hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-xl transition duration-200">
+                                {t('puppies.inquire')}
+                            </Link>
+                        </div>
+                    )}
+                </div>
+            </div>
+
+            {/* Litter Gallery Carousel */}
+            {litter.gallery && litter.gallery.length > 0 && (
+                <div className="border-t border-gray-100 p-8 bg-gray-50">
+                    <h4 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6 text-center">{t('puppies.more_from_litter')}</h4>
+                    <div className="max-w-2xl mx-auto">
+                        <ImageCarousel images={litter.gallery} altTexts={litter.gallery.map((_, i) => `${litter.sire} x ${litter.dam} — ${t('puppies.puppy_photo_alt')} ${i + 1}`)} className="" adaptiveHeight={true} />
+                    </div>
+                </div>
+            )}
+        </div>
+    );
 
     return (
         <div className="min-h-screen bg-white py-12">
@@ -128,7 +196,7 @@ const Puppies: React.FC = () => {
                 </div>
 
                 {/* Available Puppies Section */}
-                {AVAILABLE_PUPPIES && AVAILABLE_PUPPIES.length > 0 && (
+                {AVAILABLE_PUPPIES.length > 0 && (
                     <div className="mb-24">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-stella-gold/50"></div>
@@ -178,69 +246,22 @@ const Puppies: React.FC = () => {
                     </div>
                 )}
 
-                <div className="space-y-12 mb-24">
-                    {translatedLitters.map((litter) => (
-                        <div key={litter.id} className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <div className="flex flex-col md:flex-row">
-                                <div className="md:w-2/5 min-h-[300px] md:h-auto relative">
-                                    <Picture src={litter.image} alt={`${litter.sire} x ${litter.dam} — ${t('puppies.litter_alt')} — ${litter.puppiesCount}`} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
-                                    <div className="absolute top-4 left-4">
-                                        <span className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-md
-                                        ${litter.status === 'Available' ? 'bg-green-500 text-white' :
-                                                litter.status === 'Planned' ? 'bg-blue-500 text-white' : 'bg-gray-500 text-white'}`}>
-                                            {litter.statusText}
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className="p-8 md:w-3/5 flex flex-col justify-center">
-                                    <h2 className="text-3xl font-serif font-bold text-stella-blue mb-2">
-                                        {litter.sire} x {litter.dam}
-                                    </h2>
-                                    <p className="text-gray-500 text-sm mb-6 uppercase tracking-wide">
-                                        {litter.status === 'Planned' ? t('puppies.expecting') : t('puppies.arrived')} {litter.status === 'Planned' ? 'Winter 2025' : 'Spring 2026'}
-                                    </p>
+                {currentLitters.length > 0 && (
+                    <div className="space-y-12 mb-24">
+                        {currentLitters.map(renderLitter)}
+                    </div>
+                )}
 
-                                    <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                                        {litter.description}
-                                    </p>
-
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                                        <div className="flex items-center text-gray-600 bg-gray-50 p-3 rounded-lg">
-                                            <Calendar className="mr-3 text-stella-gold" size={20} />
-                                            <div>
-                                                <p className="text-xs text-gray-400 font-bold uppercase">{t('puppies.whelp_date')}</p>
-                                                <p className="font-medium">{litter.whelpDate}</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center text-gray-600 bg-gray-50 p-3 rounded-lg">
-                                            <Baby className="mr-3 text-stella-gold" size={20} />
-                                            <div>
-                                                <p className="text-xs text-gray-400 font-bold uppercase">{t('puppies.go_home_date')}</p>
-                                                <p className="font-medium">{litter.goHomeDate}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <Link to="/contact" className="inline-block w-full sm:w-auto text-center bg-stella-blue hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-xl transition duration-200">
-                                            {t('puppies.inquire')}
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Litter Gallery Carousel */}
-                            {litter.gallery && litter.gallery.length > 0 && (
-                                <div className="border-t border-gray-100 p-8 bg-gray-50">
-                                    <h4 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6 text-center">{t('puppies.more_from_litter')}</h4>
-                                    <div className="max-w-2xl mx-auto">
-                                        <ImageCarousel images={litter.gallery} altTexts={litter.gallery.map((_, i) => `${litter.sire} x ${litter.dam} — ${t('puppies.puppy_photo_alt')} ${i + 1}`)} className="" adaptiveHeight={true} />
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                </div>
+                {!hasAvailability && (
+                    <div className="mb-24 bg-stella-cream border border-stella-sand rounded-3xl p-10 md:p-14 text-center">
+                        <PawPrint className="mx-auto text-stella-gold mb-6" size={40} />
+                        <h2 className="text-3xl font-serif font-bold text-stella-blue mb-4">{t('puppies.none_available_title')}</h2>
+                        <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto mb-8">{t('puppies.none_available_desc')}</p>
+                        <Link to="/contact?interest=waitlist" className="inline-block w-full sm:w-auto text-center bg-stella-blue hover:bg-stella-dark text-white font-bold py-4 px-10 rounded-xl transition duration-300">
+                            {t('puppies.join_waitlist')}
+                        </Link>
+                    </div>
+                )}
 
                 <div className="mb-24">
                     <div className="flex items-center gap-4 mb-8">
@@ -248,6 +269,11 @@ const Puppies: React.FC = () => {
                         <h2 className="text-2xl font-serif text-gray-400 uppercase tracking-widest">{t('puppies.past_litters')}</h2>
                         <div className="h-px flex-1 bg-gray-200"></div>
                     </div>
+                    {pastLitters.length > 0 && (
+                        <div className="space-y-12 mb-12">
+                            {pastLitters.map(renderLitter)}
+                        </div>
+                    )}
                     <PuppyLocationMap />
                 </div>
 
