@@ -11,7 +11,6 @@ import { useLanguage } from '../context/LanguageContext';
 import { fill, formatDate, formatMonth, getLastHomedLitter, getUpcomingLitter, weeksBetween } from '../utils/litters';
 import { useToday } from '../utils/useToday';
 
-const MAP_CENTER: [number, number] = [46, 10];
 /**
  * Map tiles: OpenStreetMap's standard tile layer (no API key; CARTO's keyless basemaps now return
  * an 'API key required' image). Usage policy, checked 4 October 2026:
@@ -71,8 +70,6 @@ const PuppyLocationMap = () => {
             // With one-finger dragging enabled, Leaflet sets touch-action: none and swallows page scrolls.
             const lockTouch = L.Browser.mobile;
             const map = L.map(container, {
-                center: MAP_CENTER,
-                zoom: 4,
                 scrollWheelZoom: false,
                 dragging: !lockTouch,
                 touchZoom: !lockTouch,
@@ -111,6 +108,9 @@ const PuppyLocationMap = () => {
 
                 marker.bindPopup(popupContent);
             });
+
+            // Fit every home in view: a fixed centre and zoom cut off Portugal and Bulgaria on phones.
+            map.fitBounds(L.latLngBounds(locations.map((loc) => [loc.lat, loc.lng])), { padding: [24, 24], maxZoom: 6 });
 
             if (lockTouch) {
                 const unlock = () => {
@@ -161,7 +161,7 @@ const PuppyLocationMap = () => {
             <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-inner border border-blue-100 bg-[#f2f2ef] z-0">
                 <div ref={mapContainerRef} role="region" aria-label={t('puppies.map_label')} className="w-full h-full z-10"></div>
                 {touchLocked && (
-                    <p className="pointer-events-none absolute top-3 left-1/2 -translate-x-1/2 z-[500] whitespace-nowrap rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-stella-dark shadow">
+                    <p className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[500] max-w-[80%] text-center rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-stella-dark shadow">
                         {t('puppies.map_touch_hint')}
                     </p>
                 )}
