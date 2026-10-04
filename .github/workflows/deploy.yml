@@ -4,40 +4,51 @@ on:
   push:
     branches:
       - main
-      - main
-      - temp-migration-branch
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# One deployment at a time; never cancel a production deploy that is already running.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
+        with:
+          # Full history: scripts/prerender.mjs dates each sitemap <lastmod> by the last commit of the page.
+          fetch-depth: 0
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
+      - name: Type check
+        run: npm run typecheck
+
+      # Client build + SSR build + prerender of every route to static HTML,
+      # sitemap.xml, 404.html and legacy redirect stubs (see scripts/prerender.mjs).
       - name: Build
         run: npm run build
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
-          # Upload dist repository
           path: './dist'
 
   deploy:
@@ -50,4 +61,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

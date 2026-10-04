@@ -2,20 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .bg-hero-puppies {
-    background-image: url("/images/puppies.jpg");
-    background-image: image-set(
-      url("/images/puppies.webp") type("image/webp"),
-      url("/images/puppies.jpg") type("image/jpeg")
-    );
+@layer base {
+  /*
+   * One visible keyboard focus style for the whole site (WCAG 2.4.7). Only :focus-visible, so
+   * mouse clicks on links and buttons don't show it. Components may override it with
+   * focus-visible:* utilities; sections on dark backgrounds use .on-dark for a light outline.
+   */
+  :focus-visible {
+    outline: 2px solid theme('colors.stella-blue');
+    outline-offset: 2px;
   }
-
-  .bg-testimonials-stelipuppy {
-    background-image: url("/images/steliandpuppy.jpg");
-    background-image: image-set(
-      url("/images/steliandpuppy.webp") type("image/webp"),
-      url("/images/steliandpuppy.jpg") type("image/jpeg")
-    );
+  .on-dark :focus-visible {
+    outline-color: theme('colors.white');
   }
 }
