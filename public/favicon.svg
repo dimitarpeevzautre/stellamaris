@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Stella Maris, "Star of the Sea": a gold star over two waves. Source for every icon
+       (scripts/generate-icons.mjs renders the PNG/ICO sizes from this file). -->
+  <rect width="64" height="64" rx="14" fill="#1e3a8a"/>
+  <path fill="#d4af37" d="M32 8.5 35.8 19.3 47.2 19.6 38.1 26.5 41.4 37.4 32 30.9 22.6 37.4 25.9 26.5 16.8 19.6 28.2 19.3Z"/>
+  <path fill="none" stroke="#f9f7f2" stroke-width="4.5" stroke-linecap="round" d="M10 45.5q5.5-5 11 0t11 0 11 0 11 0"/>
+  <path fill="none" stroke="#f9f7f2" stroke-opacity=".55" stroke-width="4.5" stroke-linecap="round" d="M10 54.5q5.5-5 11 0t11 0 11 0 11 0"/>
+</svg>

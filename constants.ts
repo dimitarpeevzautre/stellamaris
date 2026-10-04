@@ -1,138 +1,163 @@
-import { Dog, Litter, AvailablePuppy } from './types';
+import type { AvailablePuppy, Dog, Litter, Photo, PlannedLitter, PuppyHome } from './types';
 
 export const SITE_NAME = "Stella Maris Kennel";
-export const TAGLINE = "Breeding quality PWD (Portuguese Water Dog) dogs since 2005.";
 export const CONTACT_EMAIL = "hello@stellamaris.dog";
 export const CONTACT_PHONE = "+359 897 014 015";
 export const CONTACT_WHATSAPP = `https://wa.me/${CONTACT_PHONE.replace(/\D/g, '')}`;
 export const SOCIAL_FACEBOOK = "https://www.facebook.com/portuguesewaterdogbulgaria/";
 export const SOCIAL_INSTAGRAM = "https://www.instagram.com/pwdbulgaria";
 
-export const ABOUT_TEXT = `We are Steli and Mitko, and welcome to our family! Stella Maris is our labor of love, a home filled with the laughter of our three daughters and the wagging tails of our Portuguese Water Dogs. To us, these dogs aren't just pets; they are family members who share every part of our lives.
-
-We believe that a dog’s place is in the heart of the home. Our dogs live inside with us, enjoying the comfort of our sofas and the warmth of our daily routine. It is this close bond that nurtures their happy, affectionate, and well-balanced temperaments.
-
-We are a family of adventurers at heart. Our favorite times are spent traveling together in our camper, discovering new horizons with the whole pack. Whether on the road or at home, life is simply better when we are all together.`;
-
-export const FEATURES = [
-  {
-    title: "Years of Experience",
-    description: "We've seen it all and learned from the best, refining our breeding practices and canine care expertise over the years..."
-  },
-  {
-    title: "Daily Puppy Handling",
-    description: "We believe that early socialization is crucial for happy, well-adjusted dogs. That's why we handle our puppies daily..."
-  },
-  {
-    title: "Passion + Integrity",
-    description: "Our love for dogs is at the heart of everything we do. We're committed to ethical breeding practices, prioritizing the health and well-being of our dogs above all else."
-  },
-  {
-    title: "It's Not Just A Hobby",
-    description: "Raising and caring for dogs is more than just a job for us – it's our passion and our life's work."
-  }
+/** "Life at Stella Maris" carousel on the About page. Alt texts: about.gallery.* in utils/i18n/{en,bg}.ts. */
+export const ABOUT_GALLERY: Photo[] = [
+  { src: '/images/gallery-story/portuguese-water-dog-family-pisa.jpg', altKey: 'about.gallery.pisa' },
+  { src: '/images/gallery-story/portuguese-water-dog-beach-walk.jpg', altKey: 'about.gallery.beach_walk' },
+  { src: '/images/gallery-story/portuguese-water-dogs-mountain-town.jpg', altKey: 'about.gallery.mountain_town' },
+  { src: '/images/gallery-story/portuguese-water-dogs-seaside-wall.jpg', altKey: 'about.gallery.seaside_wall' },
+  { src: '/images/gallery-story/portuguese-water-dogs-forest-walk.jpg', altKey: 'about.gallery.forest_walk' },
+  { src: '/images/gallery-story/portuguese-water-dog-sofa.jpg', altKey: 'about.gallery.sofa' },
+  { src: '/images/gallery-story/portuguese-water-dogs-with-child.jpg', altKey: 'about.gallery.with_child' },
+  { src: '/images/gallery-story/portuguese-water-dog-kayak.jpg', altKey: 'about.gallery.kayak' },
+  { src: '/images/gallery-story/portuguese-water-dog-paddleboard.jpg', altKey: 'about.gallery.paddleboard' },
+  { src: '/images/gallery-story/portuguese-water-dog-beach.jpg', altKey: 'about.gallery.beach' },
+  { src: '/images/gallery-story/portuguese-water-dog-show-podium.jpg', altKey: 'about.gallery.show_podium' },
+  { src: '/images/gallery-story/portuguese-water-dogs-water-rescue-training.jpg', altKey: 'about.gallery.water_rescue' }
 ];
 
-export const TESTIMONIALS = [
-  {
-    text: "Stella Maris are an example of dedication, full care and true love for all their small and large dogs. Thank you, Steli and Mitko, for the wonderful puppy, for the ongoing support and for all the advice.",
-    author: "Aria Nereya's Family"
-  },
-  {
-    text: "Stella Maris made the whole process so easy, and we felt confident bringing our new puppy home, even though she had a long plane trip.",
-    author: "Amaya's Family in London"
-  },
-  {
-    text: "Alma Sol is a bundle of joy, I can't imagine my life without this little cuteness. Thank you Steli for your care and bringing her to me!",
-    author: "Rozalina Dudekova"
-  }
-];
+/** Home page hero (the LCP image). routes.ts preloads it with the same srcset/sizes. */
+export const HOME_HERO_IMAGE = {
+  src: '/images/puppies.jpg',
+  // The hero is 85vh tall with object-cover, so on tall (portrait) screens the 3:2 photo is
+  // rendered wider than the viewport: 85vh * 1.5 ≈ 128vh.
+  sizes: '(max-aspect-ratio: 5/4) 128vh, 100vw',
+};
 
-export const ABOUT_GALLERY = [
-  "/images/gallery-story/compressed_20220621_114512~2.jpg",
-  "/images/gallery-story/compressed_20220622_075858.jpg",
-  "/images/gallery-story/compressed_20230822_152334.jpg",
-  "/images/gallery-story/compressed_20230905_111232.jpg",
-  "/images/gallery-story/compressed_20240814_092410.jpg",
-  "/images/gallery-story/compressed_20240816_113613.jpg",
-  "/images/gallery-story/compressed_20240817_085158.jpg",
-  "/images/gallery-story/compressed_20240831_194409.jpg",
-  "/images/gallery-story/compressed_IMG-1d468916d27c559cafe93fe2a83e1cb3-V-EDIT.jpg",
-  "/images/gallery-story/compressed_IMG_20190923_110020.jpg",
-  "/images/gallery-story/compressed_IMG_20250127_112613.jpg",
-  "/images/gallery-story/compressed_RLL09337.jpg",
-  "/images/gallery-story/compressed_Screenshot_20250127_090833.jpg"
-];
+/** Photo column on Our Dogs: full width on phones/tablets, half of the max-w-7xl container from lg up.
+ * routes.ts preloads the first dog's photo (the page's LCP image) with these sizes. */
+export const DOG_PHOTO_SIZES = '(min-width: 1280px) 576px, (min-width: 1024px) 45vw, 100vw';
+
+/** Decorative background of the testimonials section (small blurred copy, see scripts/encode-images.mjs). */
+export const TESTIMONIALS_BACKGROUND_IMAGE = '/images/steliandpuppy.jpg';
+
+/**
+ * Facts about the kennel used across the site, the structured data (JSON-LD) and /llms.txt.
+ * Only add facts that can be backed up; see the comments for the source of each.
+ */
+export const KENNEL = {
+  /** Kennel registration number as shown on the site since launch. */
+  registrationNumber: '166/2024',
+  /** Founders as they present themselves on the site (first names only). */
+  founders: ['Steli', 'Mitko'],
+  /** Cyrillic spelling of the brand, used by Bulgarian visitors who heard the name on TV or Facebook. */
+  nameBg: 'Стела Марис',
+  /**
+   * Independent press coverage. Source: AGRO TV, 31 March 2026, "Домът на Португалското водно куче:
+   * Когато страстта се превърне в съдба" (fetched 3 Oct 2026). The article calls Steli and Mitko
+   * "създателите на първия развъдник за Португалско водно куче в България".
+   */
+  press: [
+    {
+      id: 'agrotv-2026',
+      publisher: 'AGRO TV',
+      url: 'https://agrotv.bg/2026/03/31/%D0%B4%D0%BE%D0%BC%D1%8A%D1%82-%D0%BD%D0%B0-%D0%BF%D0%BE%D1%80%D1%82%D1%83%D0%B3%D0%B0%D0%BB%D1%81%D0%BA%D0%BE%D1%82%D0%BE-%D0%B2%D0%BE%D0%B4%D0%BD%D0%BE-%D0%BA%D1%83%D1%87%D0%B5-%D0%BA%D0%BE%D0%B3/',
+      headline: 'Домът на Португалското водно куче: Когато страстта се превърне в съдба',
+      datePublished: '2026-03-31',
+      inLanguage: 'bg',
+    },
+  ],
+} as const;
+
+/**
+ * Date the litter/puppy information (LITTERS, PLANNED_LITTERS, AVAILABLE_PUPPIES, PUPPY_HOMES)
+ * was last checked. Shown as "Last updated" on the Puppies page and used in the structured data.
+ * Update it whenever you change any of those lists.
+ */
+export const LITTERS_UPDATED = '2026-10-03';
+
+/** Date the FAQ answers (utils/faq.ts) were last reviewed. Shown on the FAQ page. */
+export const FAQ_UPDATED = '2026-10-04';
+
+/** Date the privacy policy (utils/privacyPolicy.ts) was last changed. Shown on the Privacy page. */
+export const PRIVACY_UPDATED = '2026-10-04';
 
 export const DOGS: Dog[] = [
   {
-    id: 'sire-1',
+    id: 'arthur',
     name: 'Arthur',
     registeredName: 'Arthur Rubinstein Do Veleiro Nagual',
     breed: 'Portuguese Water Dog',
     gender: 'Male',
-    dob: '2020-05-15',
+    // dob: removed. The old value ('2020-05-15') contradicted the bio and the old site ('2019');
+    // add the date from Arthur's pedigree before showing it anywhere.
     image: '/images/arthy.jpg',
-    description: 'Arthy has been a part of our family since 2018. We traveled through Europe, where Arthur won every podium we managed to get him on. He is a lovely companion to our kids. He possesses a strong, spirited temperament and a classic wavy coat. Arthur is known for his incredible focus and drive, making him not only a beautiful representation of the breed but a highly capable working dog. He loves the water and has an natural affinity for retrieving.',
-    healthClearances: [
-      'GM1 - Genotype N/N (clear)',
-      'prcd-PRA - Genotype N/Pra',
-      'HIPS: A',
-      'Eyes: Clear',
-      'Improper Coat: Genotype N/N',
-      'CJM - Genotype N/N',
-      'CDDY and IVDD risk - Genotype N/N'
+    healthResults: [
+      { test: 'hips', status: 'graded', value: 'A' },
+      { test: 'eyes', status: 'clear' },
+      { test: 'gm1', status: 'clear', value: 'N/N' },
+      // Recorded as 'N/Pra': one copy of the prcd-PRA variant (carrier, not affected).
+      { test: 'prcd_pra', status: 'carrier', value: 'N/PRA' },
+      { test: 'improper_coat', status: 'clear', value: 'N/N' },
+      { test: 'cjm', status: 'clear', value: 'N/N' },
+      { test: 'cddy_ivdd', status: 'clear', value: 'N/N' },
     ],
-    prizes: ['Spanish Champion - World Dog Show 2022', 'Second Place - Geneva Grand Prix 2023', 'International multi Champion and Grand Champion of - Spain, Greece, Bulgaria, Romania, Turkey, Serbia']
   },
   {
-    id: 'dam-1',
+    id: 'riva',
     name: 'Riva Rosa',
     registeredName: 'Riva Rosa Do Lusiadas',
     breed: 'Portuguese Water Dog',
     gender: 'Female',
-    dob: '2021-02-10',
+    // dob: removed. The old value ('2021-02-10') does not fit her junior (2023) and intermediate
+    // class (2024) results; add the date from Riva's pedigree before showing it anywhere.
     image: '/images/riva.jpg',
-    description: `We first met Riva in Florence in 2023, and she has been the heart of our kennel ever since. Playful and incredibly intelligent, she embodies everything we love about the Portuguese Water Dog. Beyond her spirited personality, Riva comes from a distinguished champion lineage, inheriting the grace and excellence of her ancestors.
-
-She possesses the most gentle soul and has proven to be a wonderful, intuitive mother. Her striking brown wavy coat is amazing to the touch, and she is never one to shy away from affection, often insisting on cuddles and hugs. While she is a soft-hearted companion, she is also a fierce protector of both her puppies and our children.
-
-Riva is a true advocate for her breed, balancing her life at home with a meaningful career at local kindergartens. There, she helps children feel calm and confident, using her steady temperament to build their trust in dogs. She is truly a special girl who represents the very best of her heritage.`,
-    healthClearances: [
-      'prcd-PRA - Genotype N/N (A)',
-      'GM1 - Genotype N/N',
-      'eo-PRA - Genotype N/N',
-      'Improper Coat - Genotype N/N',
-      'CDPA - Genotype N/N',
-      'CDDY and IVDD Risk - Genotype N/N',
-      'RBP4 - Genotype N/N'
+    healthResults: [
+      { test: 'gm1', status: 'clear', value: 'N/N' },
+      // Recorded as 'N/N (A)': clear.
+      { test: 'prcd_pra', status: 'clear', value: 'N/N' },
+      { test: 'eo_pra', status: 'clear', value: 'N/N' },
+      { test: 'improper_coat', status: 'clear', value: 'N/N' },
+      { test: 'cdpa', status: 'clear', value: 'N/N' },
+      { test: 'cddy_ivdd', status: 'clear', value: 'N/N' },
+      { test: 'rbp4', status: 'clear', value: 'N/N' },
     ],
-    prizes: [
-      'Junior Winner of Geneva Grand Prix 2023',
-      'Intermediate Class Winner of World Dog Show 2024',
-      'Junior Champion of Turkey',
-      'Champion of Bulgaria'
-    ]
-  }
+  },
 ];
 
 export const LITTERS: Litter[] = [
   {
     id: 'litter-2025-december',
+    translationKey: 'kings',
     sire: 'Arthur Rubinstein',
     dam: 'Riva Rosa',
     whelpDate: '2025-12-25',
     goHomeDate: '2026-03-01',
     status: 'Sold Out',
     puppiesCount: 9,
-    description: 'The Kings litter. Riva gave birth on the 25th of December of 9 healthy strong boys. 8 of them are brown, what are the chances?',
-    image: '/images/kings.png',
+    image: { src: '/images/gallery-kings/kings-litter-brown-puppy.jpg', altKey: 'puppies.litters.kings.photo_brown_puppy' },
     gallery: [
-      '/images/gallery-kings/compressed_IMG_20260102_132651492.jpg',
-      '/images/gallery-kings/compressed_IMG_20260203_123036793.jpg',
-      '/images/gallery-kings/compressed_IMG_4141.jpg'
+      { src: '/images/gallery-kings/kings-litter-newborn-puppy.jpg', altKey: 'puppies.litters.kings.photo_newborn' },
+      { src: '/images/gallery-kings/kings-litter-brown-puppy.jpg', altKey: 'puppies.litters.kings.photo_brown_puppy' }
     ]
   }
+];
+
+/**
+ * Litters we are planning. The announcement bar, the Puppies page, the FAQ and /llms.txt all
+ * read from here; an entry disappears from the site automatically once its month has passed.
+ * Add sire/dam only once the pairing is confirmed.
+ */
+export const PLANNED_LITTERS: PlannedLitter[] = [
+  { id: 'litter-2027-january', expectedMonth: '2027-01' }
+];
+
+/**
+ * Where some of our puppies live today (the map on the Puppies page). This is not a complete
+ * list of every puppy we have bred, and the page says so.
+ */
+export const PUPPY_HOMES: PuppyHome[] = [
+  { id: 'portugal', countryKey: 'portugal', count: 2, lat: 39.3999, lng: -8.2245 },
+  { id: 'spain', countryKey: 'spain', count: 1, lat: 40.4637, lng: -3.7492 },
+  { id: 'uk', countryKey: 'uk', cityKey: 'london', count: 1, lat: 51.5074, lng: -0.1278 },
+  { id: 'bulgaria', countryKey: 'bulgaria', cityKey: 'sofia', count: 4, lat: 42.6977, lng: 23.3219 },
 ];
 
 export const AVAILABLE_PUPPIES: AvailablePuppy[] = [];

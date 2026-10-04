@@ -4,104 +4,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stella Maris Kennel | Portuguese Water Dog Breeder in Sofia, Bulgaria</title>
-  <meta name="description"
-    content="Stella Maris Kennel — FCI registered Portuguese Water Dog breeder in Sofia, Bulgaria. Champion bloodlines, health-tested puppies raised in a family home." />
-  <meta name="keywords"
-    content="Portuguese Water Dog, PWD, Portuguese Water Dog breeder, Portuguese Water Dog puppies, dog breeder Bulgaria, dog breeder Sofia, PWD breeder Europe, Stella Maris Kennel" />
+  <!--app-head-->
   <meta name="author" content="Stella Maris Kennel" />
-  <meta name="robots" content="index, follow" />
   <meta name="geo.region" content="BG-22" />
   <meta name="geo.placename" content="Sofia, Bulgaria" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17854194557">
-  </script>
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Icons: generated from public/favicon.svg by scripts/generate-icons.mjs -->
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#1e3a8a" />
+
+  <!-- Google tag, Consent Mode v2 (basic): everything is denied by default and gtag.js is
+       NOT loaded here. utils/analytics.ts injects it only after the visitor accepts cookies. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'AW-17854194557');
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
   </script>
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Twitter (the per-page tags, incl. og:image and its alt, come from seo.ts) -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Stella Maris Kennel | Portuguese Water Dog Breeder in Bulgaria" />
-  <meta property="og:description"
-    content="FCI registered Portuguese Water Dog breeder in Sofia, Bulgaria. Champion bloodlines, health-tested puppies raised in a family home." />
-  <meta property="og:image" content="https://stellamaris.dog/images/family.jpeg" />
-  <meta property="og:url" content="https://stellamaris.dog/" />
   <meta property="og:site_name" content="Stella Maris Kennel" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="bg_BG" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Stella Maris Kennel | Portuguese Water Dog Breeder in Bulgaria" />
-  <meta name="twitter:description"
-    content="FCI registered Portuguese Water Dog breeder in Sofia, Bulgaria. Champion bloodlines, health-tested puppies raised in a family home." />
-  <meta name="twitter:image" content="https://stellamaris.dog/images/family.jpeg" />
 
-  <link rel="canonical" href="https://stellamaris.dog/" />
-
-  <!-- Preload hero LCP image -->
-  <link rel="preload" as="image" href="/images/puppies.webp" type="image/webp" fetchpriority="high" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "LocalBusiness",
-          "@id": "https://stellamaris.dog/#business",
-          "name": "Stella Maris Kennel",
-          "description": "FCI registered Portuguese Water Dog breeder in Sofia, Bulgaria. Champion bloodlines, health-tested puppies raised in a family home.",
-          "url": "https://stellamaris.dog",
-          "telephone": "+359897014015",
-          "email": "hello@stellamaris.dog",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Sofia",
-            "addressCountry": "BG"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 42.6977,
-            "longitude": 23.3219
-          },
-          "image": "https://stellamaris.dog/images/family.jpeg",
-          "sameAs": [
-            "https://www.facebook.com/portuguesewaterdogbulgaria/",
-            "https://www.instagram.com/pwdbulgaria"
-          ],
-          "priceRange": "$$"
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://stellamaris.dog/#website",
-          "name": "Stella Maris Kennel",
-          "url": "https://stellamaris.dog",
-          "description": "Portuguese Water Dog breeder in Sofia, Bulgaria",
-          "inLanguage": ["en", "bg"]
-        }
-      ]
-    }
-    </script>
+  <!-- Structured data (JSON-LD) is added per page by scripts/prerender.mjs (see structuredData.ts). -->
 
 </head>
 
 <body class="bg-stella-cream text-stella-dark antialiased">
-  <div id="root"></div>
-  <noscript>
-    <h1>Stella Maris Kennel — Portuguese Water Dog Breeder in Sofia, Bulgaria</h1>
-    <p>Stella Maris is an FCI registered Portuguese Water Dog breeder based in Sofia, Bulgaria. We breed champion-line,
-      health-tested Portuguese Water Dogs raised in a loving family home near the Vitosha Mountains. Contact us at
-      hello@stellamaris.dog or call +359 897 014 015.</p>
-    <p>Follow us on <a href="https://www.facebook.com/portuguesewaterdogbulgaria/">Facebook</a> or <a
-        href="https://www.instagram.com/pwdbulgaria">Instagram</a>.</p>
-  </noscript>
+  <div id="root"><!--app-html--></div>
   <script type="module" src="/index.tsx"></script>
 </body>
 

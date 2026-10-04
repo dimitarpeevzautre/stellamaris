@@ -1,0 +1,15 @@
+{
+  "name": "Stella Maris Kennel",
+  "short_name": "Stella Maris",
+  "description": "Portuguese Water Dog breeder in Sofia, Bulgaria",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#1e3a8a",
+  "background_color": "#f9f7f2",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
