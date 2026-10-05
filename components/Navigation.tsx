@@ -69,7 +69,7 @@ const Navigation: React.FC = () => {
     <>
       {/* Top Announcement Bar */}
       {upcoming && (
-        <div className="on-dark bg-slate-700 text-white text-xs sm:text-sm text-center py-2 px-4 tracking-wide">
+        <div className="on-dark announcement-flash bg-slate-700 text-white text-xs sm:text-sm text-center py-2 px-4 tracking-wide">
           {fill(t('nav.top_announcement'), { month: formatMonth(upcoming.expectedMonth, language) })}{' '}
           <Link to={path('contact', '?interest=waitlist')} className="underline hover:text-stella-gold">{t('nav.join_waitlist')}</Link>
         </div>

@@ -16,3 +16,24 @@
     outline-color: theme('colors.white');
   }
 }
+
+@layer components {
+  /*
+   * Next-litter bar: two soft red pulses shortly after the page first paints, then back to slate.
+   * CSS-only, so it runs once on load (the bar stays mounted across client-side navigation and
+   * hydration) and is skipped for visitors who prefer reduced motion. White text stays above
+   * 4.5:1 on every frame (red-700 is 6.5:1).
+   */
+  .announcement-flash {
+    animation: announcement-flash 2.4s ease-in-out 0.8s 1;
+  }
+  @keyframes announcement-flash {
+    0%, 50%, 100% { background-color: theme('colors.slate.700'); }
+    25%, 75% { background-color: theme('colors.red.700'); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .announcement-flash {
+      animation: none;
+    }
+  }
+}
