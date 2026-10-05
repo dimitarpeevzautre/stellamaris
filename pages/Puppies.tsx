@@ -370,11 +370,13 @@ const Puppies: React.FC = () => {
                 {!hasAvailability && (
                     <div className="mb-24 bg-stella-cream border border-stella-sand rounded-3xl p-10 md:p-14 text-center">
                         <PawPrint className="mx-auto text-stella-gold mb-6" size={40} />
-                        <h2 className="text-3xl font-serif font-bold text-stella-blue mb-4">{t('puppies.none_available_title')}</h2>
-                        <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+                        <h2 className="text-3xl font-serif font-bold text-stella-blue mb-4">
                             {upcoming
-                                ? fill(t('puppies.none_available_desc'), { month: formatMonth(upcoming.expectedMonth, language) })
-                                : t('puppies.none_available_desc_no_litter')}
+                                ? fill(t('puppies.none_available_title'), { month: formatMonth(upcoming.expectedMonth, language) })
+                                : t('puppies.none_available_title_no_litter')}
+                        </h2>
+                        <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+                            {upcoming ? t('puppies.none_available_desc') : t('puppies.none_available_desc_no_litter')}
                         </p>
                         <Link to={path('contact', '?interest=waitlist')} className="inline-block w-full sm:w-auto text-center bg-stella-blue hover:bg-stella-dark text-white font-bold py-4 px-10 rounded-xl transition duration-300">
                             {t('puppies.join_waitlist')}
