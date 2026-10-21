@@ -71,7 +71,7 @@ export const KENNEL = {
  * was last checked. Shown as "Last updated" on the Puppies page and used in the structured data.
  * Update it whenever you change any of those lists.
  */
-export const LITTERS_UPDATED = '2026-10-03';
+export const LITTERS_UPDATED = '2026-10-21';
 
 /** Date the FAQ answers (utils/faq.ts) were last reviewed. Shown on the FAQ page. */
 export const FAQ_UPDATED = '2026-10-04';
@@ -157,7 +157,13 @@ export const PUPPY_HOMES: PuppyHome[] = [
   { id: 'portugal', countryKey: 'portugal', count: 2, lat: 39.3999, lng: -8.2245 },
   { id: 'spain', countryKey: 'spain', count: 1, lat: 40.4637, lng: -3.7492 },
   { id: 'uk', countryKey: 'uk', cityKey: 'london', count: 1, lat: 51.5074, lng: -0.1278 },
-  { id: 'bulgaria', countryKey: 'bulgaria', cityKey: 'sofia', count: 4, lat: 42.6977, lng: 23.3219 },
+  { id: 'bulgaria', countryKey: 'bulgaria', cityKey: 'sofia', count: 5, lat: 42.6977, lng: 23.3219 },
+  { id: 'plovdiv', countryKey: 'bulgaria', cityKey: 'plovdiv', count: 1, lat: 42.1354, lng: 24.7453 },
+  { id: 'greece', countryKey: 'greece', cityKey: 'athens', count: 2, lat: 37.9838, lng: 23.7275 },
+  { id: 'malaga', countryKey: 'spain', cityKey: 'malaga', count: 1, lat: 36.7213, lng: -4.4214 },
+  { id: 'lithuania', countryKey: 'lithuania', cityKey: 'vilnius', count: 1, lat: 54.6872, lng: 25.2797 },
+  { id: 'poland', countryKey: 'poland', cityKey: 'warsaw', count: 1, lat: 52.2297, lng: 21.0122 },
+  { id: 'ukraine', countryKey: 'ukraine', cityKey: 'odesa', count: 1, lat: 46.4825, lng: 30.7233 },
 ];
 
 export const AVAILABLE_PUPPIES: AvailablePuppy[] = [];

@@ -219,6 +219,16 @@ const bg: Translations = {
             bulgaria: 'България',
             sofia: 'София',
             london: 'Лондон',
+            greece: 'Гърция',
+            athens: 'Атина',
+            malaga: 'Малага',
+            plovdiv: 'Пловдив',
+            lithuania: 'Литва',
+            vilnius: 'Вилнюс',
+            poland: 'Полша',
+            warsaw: 'Варшава',
+            ukraine: 'Украйна',
+            odesa: 'Одеса',
             puppy: 'кученце',
             puppies: 'кученца'
         }

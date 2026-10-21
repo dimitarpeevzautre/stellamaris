@@ -292,7 +292,7 @@ export const buildLlmsFullTxt = (): string => {
   if (upcoming) out.push(`- Next litter: expected ${formatMonth(upcoming.expectedMonth, 'en')}.`);
   out.push(
     '',
-    `Some of the places where our puppies live today: ${PUPPY_HOMES.map((h) => `${t(`puppies.locations.${h.countryKey}`)} (${h.count})`).join(', ')}. This is not a complete list.`,
+    `Some of the places where our puppies live today: ${PUPPY_HOMES.map((h) => `${h.cityKey ? `${t(`puppies.locations.${h.cityKey}`)}, ` : ''}${t(`puppies.locations.${h.countryKey}`)} (${h.count})`).join('; ')}. This is not a complete list.`,
     '',
     `## ${t('puppies.process.title')}`,
     '',

@@ -218,6 +218,16 @@ Riva is a true ambassador for her breed. Alongside her life at home, she works w
             bulgaria: 'Bulgaria',
             sofia: 'Sofia',
             london: 'London',
+            greece: 'Greece',
+            athens: 'Athens',
+            malaga: 'Málaga',
+            plovdiv: 'Plovdiv',
+            lithuania: 'Lithuania',
+            vilnius: 'Vilnius',
+            poland: 'Poland',
+            warsaw: 'Warsaw',
+            ukraine: 'Ukraine',
+            odesa: 'Odesa',
             puppy: 'puppy',
             puppies: 'puppies'
         }

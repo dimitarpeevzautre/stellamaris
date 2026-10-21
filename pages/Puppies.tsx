@@ -172,7 +172,8 @@ const PuppyLocationMap = () => {
                 {locations.map((loc) => (
                     <div key={loc.id} className="bg-white p-3 rounded-lg shadow-sm border border-gray-100">
                         <p className="text-2xl font-serif text-stella-gold-dark font-bold">{loc.count}</p>
-                        <p className="text-xs font-bold uppercase tracking-widest text-gray-500">{loc.country}</p>
+                        <p className="text-xs font-bold uppercase tracking-widest text-gray-500">{loc.city ?? loc.country}</p>
+                        {loc.city && <p className="text-xs text-gray-500">{loc.country}</p>}
                     </div>
                 ))}
             </div>
