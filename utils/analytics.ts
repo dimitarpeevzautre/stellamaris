@@ -53,6 +53,7 @@ const gtag: Gtag = (...args) => {
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () {
       // gtag.js requires the Arguments object itself, not an array.
+      // eslint-disable-next-line prefer-rest-params
       window.dataLayer!.push(arguments);
     };
   }

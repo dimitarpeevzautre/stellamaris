@@ -38,10 +38,20 @@ jobs:
       - name: Type check
         run: npm run typecheck
 
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests
+        run: npm test
+
       # Client build + SSR build + prerender of every route to static HTML,
       # sitemap.xml, 404.html and legacy redirect stubs (see scripts/prerender.mjs).
       - name: Build
         run: npm run build
+
+      # Every prerendered page, redirect stub and sitemap URL exists in dist/.
+      - name: Check build output
+        run: npm run check:dist
 
       - name: Setup Pages
         uses: actions/configure-pages@v6
