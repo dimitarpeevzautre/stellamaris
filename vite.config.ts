@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 
 // React, React DOM (incl. react-dom/client + scheduler) and React Router change rarely:
 // keep them in one long-lived vendor chunk, separate from the app code.
-const VENDOR_PACKAGES = /[\/]node_modules[\/](react|react-dom|scheduler|react-router|react-router-dom|cookie|set-cookie-parser)[\/]/;
+const VENDOR_PACKAGES = /\/node_modules\/(react|react-dom|scheduler|react-router|react-router-dom|cookie|set-cookie-parser)\//;
 
 export default defineConfig(({ isSsrBuild }) => ({
   server: {

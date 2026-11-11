@@ -20,10 +20,10 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 const lookup = (table: Translations | undefined, key: string): string => {
-    let value: any = table;
+    let value: unknown = table;
     for (const k of key.split('.')) {
         if (value && typeof value === 'object' && k in value) {
-            value = value[k];
+            value = (value as Record<string, unknown>)[k];
         } else {
             return key; // Return key if translation not found
         }

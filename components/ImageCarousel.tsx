@@ -89,6 +89,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
     'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white';
 
   return (
+    // Arrow keys pressed while focus is on a control inside the carousel move the slides
+    // (WAI-ARIA carousel pattern), so the key handler belongs on the region itself.
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <div
       className={`relative group w-full ${className}`}
       role="region"

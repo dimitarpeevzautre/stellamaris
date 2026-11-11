@@ -42,17 +42,21 @@ Stella Maris Kennel — a bilingual (English/Bulgarian) website for a Portuguese
 npm install           # Install dependencies
 npm run dev           # Start dev server (port 3000, host 0.0.0.0; client-side rendering only)
 npm run typecheck     # tsc --noEmit
+npm run lint          # ESLint (typescript-eslint, react-hooks, jsx-a11y): eslint.config.js
+npm test              # Vitest unit tests in tests/ (routes, SEO, litters, structured data)
 npm run build         # encode images → client build → SSR build (dist-ssr/) → prerender into /dist
+npm run check:dist    # after a build: every prerendered page, redirect stub and sitemap URL exists in dist/
 npm run preview       # Preview production build
 ```
 
-There are **no test or lint commands** configured. Verify changes with `npm run typecheck` and `npm run build`.
+Verify changes with `npm run typecheck`, `npm run lint`, `npm test`, `npm run build` and `npm run check:dist`.
 
 ## Build & Deploy
 
 - CI/CD via GitHub Actions (`.github/workflows/deploy.yml`)
 - Pushes to `main` (or a manual `workflow_dispatch`) trigger build + deploy to GitHub Pages
-- Build: Node.js 22 → `npm ci` → `npm run typecheck` → `npm run build` → upload `/dist`
+- Build: Node.js 22 → `npm ci` → typecheck → lint → test → build → check:dist → upload `/dist`
+- Pull requests run the same checks (without deploying) in `.github/workflows/ci.yml`; Dependabot (`.github/dependabot.yml`) opens weekly npm and monthly GitHub Actions update PRs
 - `npm run build` prerenders every route in both languages to `dist/<path>/index.html` and also writes `dist/404.html`, `dist/sitemap.xml` (generated — there is no static sitemap) and noindex redirect stubs for old Jekyll-site URLs (`puppies.html`, `story.html`, `bg/*.html`, `es/` …)
 
 ## Key Conventions
@@ -103,4 +107,4 @@ There are **no test or lint commands** configured. Verify changes with `npm run 
 - `prebuild` runs `scripts/encode-images.mjs` (for each photo in `assets-src/images/`: `<name>.webp` up to 1600px, `<name>-480/-960.webp`, a `<name>.jpg` fallback ≤1200px, plus `og-image.jpg` 1200x630; writes `utils/imageManifest.ts`, removes stale outputs; per-image crop/blur options at the top of the script) and `scripts/generate-icons.mjs` (favicon.ico, apple-touch-icon, manifest icons and `images/logo.png` from `public/favicon.svg`). Both skip up-to-date files; commit their outputs. `--force` re-encodes
 - `ImageCarousel` keeps every slide in the DOM (crawlable) but only displays the current one; its neighbours are lazy-loaded invisibly so the next photo is ready. The frame has a fixed aspect ratio (no layout shift)
 - The Puppies map loads Leaflet only when it nears the viewport, shows the OpenStreetMap attribution (required by its licence), and on phones starts with dragging off ("tap to move") so swipes scroll the page
-- No testing framework or linter is configured — run `npm run typecheck` (vite build only strips types) and `npm run build`
+- Run `npm run typecheck` (vite build only strips types), `npm run lint`, `npm test` and `npm run build` before committing; tests import modules directly (`registerTranslations` both tables first when testing code that calls `translate`)
