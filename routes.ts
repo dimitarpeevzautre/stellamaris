@@ -14,7 +14,7 @@
  * bundle, the SSR bundle and the build-time prerender step.
  */
 
-import { DOGS, DOG_PHOTO_SIZES, HOME_HERO_IMAGE } from './constants';
+import { DOGS, DOG_PHOTO_SIZES, HOME_HERO_IMAGE, REHOMING, REHOMING_PHOTO_SIZES } from './constants';
 import { webpSrcSet, webpUrl } from './utils/images';
 
 export type Language = 'en' | 'bg';
@@ -61,12 +61,18 @@ export const OG_IMAGE = {
   } as Readonly<Record<Language, string>>,
 } as const;
 
-/** Preload for the home page hero (its LCP image), matching pages/Home.tsx exactly. */
+/**
+ * Preload for the home page's first image (its LCP image), matching pages/Home.tsx exactly:
+ * the rehoming lead photo while an appeal is up, otherwise the hero.
+ */
+const HOME_FIRST_IMAGE = REHOMING
+  ? { src: REHOMING.lead.src, sizes: REHOMING_PHOTO_SIZES }
+  : HOME_HERO_IMAGE;
 const HOME_HERO_PRELOAD: PreloadImage = {
-  href: webpUrl(HOME_HERO_IMAGE.src),
+  href: webpUrl(HOME_FIRST_IMAGE.src),
   type: 'image/webp',
-  srcset: webpSrcSet(HOME_HERO_IMAGE.src),
-  sizes: HOME_HERO_IMAGE.sizes,
+  srcset: webpSrcSet(HOME_FIRST_IMAGE.src),
+  sizes: HOME_FIRST_IMAGE.sizes,
 };
 
 /** Preload for the first dog's photo on Our Dogs (its LCP image), matching pages/OurDogs.tsx exactly. */

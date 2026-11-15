@@ -7,6 +7,7 @@ import { storeLanguage } from '../utils/languagePreference';
 import { prefetchTranslations } from '../utils/translations';
 import { fill, formatMonth, getUpcomingLitter } from '../utils/litters';
 import { useToday } from '../utils/useToday';
+import { REHOMING } from '../constants';
 
 /** EN/BG links to the current page in each language. Real links, so crawlers can follow them. */
 const LanguageSwitch: React.FC<{ onSwitch?: () => void }> = ({ onSwitch }) => {
@@ -68,7 +69,12 @@ const Navigation: React.FC = () => {
   return (
     <>
       {/* Top Announcement Bar */}
-      {upcoming && (
+      {REHOMING ? (
+        <div className="on-dark announcement-flash bg-slate-700 text-white text-xs sm:text-sm text-center py-2 px-4 tracking-wide">
+          {t('rehome.announcement')}{' '}
+          <Link to={`${path('home')}#rehome`} className="underline hover:text-stella-gold">{t('rehome.announcement_link')}</Link>
+        </div>
+      ) : upcoming && (
         <div className="on-dark announcement-flash bg-slate-700 text-white text-xs sm:text-sm text-center py-2 px-4 tracking-wide">
           {fill(t('nav.top_announcement'), { month: formatMonth(upcoming.expectedMonth, language) })}{' '}
           <Link to={path('contact', '?interest=waitlist')} className="underline hover:text-stella-gold">{t('nav.join_waitlist')}</Link>

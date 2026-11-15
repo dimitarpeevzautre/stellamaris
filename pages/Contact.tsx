@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Mail, Phone, MapPin, Loader2, AlertCircle } from 'lucide-react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { AVAILABLE_PUPPIES, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_WHATSAPP, LITTERS } from '../constants';
+import { AVAILABLE_PUPPIES, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_WHATSAPP, LITTERS, REHOMING } from '../constants';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import { useLanguage } from '../context/LanguageContext';
 import { getPreviousPath, trackLead } from '../utils/analytics';
@@ -13,6 +13,7 @@ const INTEREST = {
   general: 'General Inquiry',
   waitlist: 'Puppy Waitlist',
   stud: 'Stud Service',
+  rehome: 'Rehoming (Warsaw)',
 } as const;
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
@@ -71,7 +72,11 @@ const Contact: React.FC = () => {
       ? { litter: `${litter.sire} x ${litter.dam}`, puppy: puppy?.name }
       : null;
     setInquiry(context);
-    setInterest(interestParam === 'waitlist' || context ? INTEREST.waitlist : INTEREST.general);
+    const rehome = REHOMING !== null && interestParam === 'rehome' && !context;
+    setInterest(
+      rehome ? INTEREST.rehome : interestParam === 'waitlist' || context ? INTEREST.waitlist : INTEREST.general,
+    );
+    if (rehome) setMessage((current) => current || t('rehome.message'));
     if (context) {
       const template = context.puppy
         ? t('contact.puppy_message').replace('{puppy}', context.puppy)
@@ -305,6 +310,7 @@ const Contact: React.FC = () => {
                   <div>
                     <label htmlFor="contact-interest" className={labelClass}>{t('contact.interest')}</label>
                     <select id="contact-interest" name="interest" value={interest} onChange={(e) => setInterest(e.target.value)} className={inputClass}>
+                      {REHOMING && <option value={INTEREST.rehome}>{t('rehome.interest_option')}</option>}
                       <option value={INTEREST.general}>{t('contact.interest_options.general')}</option>
                       <option value={INTEREST.waitlist}>{t('contact.interest_options.waitlist')}</option>
                       <option value={INTEREST.stud}>{t('contact.interest_options.stud')}</option>

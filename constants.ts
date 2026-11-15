@@ -1,4 +1,4 @@
-import type { AvailablePuppy, Dog, Litter, Photo, PlannedLitter, PuppyHome } from './types';
+import type { AvailablePuppy, Dog, Litter, Photo, PlannedLitter, PuppyHome, Rehoming } from './types';
 
 export const SITE_NAME = "Stella Maris Kennel";
 export const CONTACT_EMAIL = "hello@stellamaris.dog";
@@ -167,3 +167,20 @@ export const PUPPY_HOMES: PuppyHome[] = [
 ];
 
 export const AVAILABLE_PUPPIES: AvailablePuppy[] = [];
+
+/** How wide the rehoming lead photo is rendered: full width on phones, half the container from lg up. */
+export const REHOMING_PHOTO_SIZES = '(min-width: 1280px) 608px, (min-width: 1024px) 48vw, 100vw';
+
+/**
+ * The puppy of ours in Warsaw, Poland, that needs a new home (announced 15 Nov 2026).
+ * Set this to `null` once he has a home: the appeal, the announcement bar link and the
+ * contact form option all disappear, and the home page opens with the kennel hero again.
+ */
+export const REHOMING: Rehoming | null = {
+  lead: { src: '/images/rehome/warsaw-standing.jpg', altKey: 'rehome.photo_standing' },
+  gallery: [
+    { src: '/images/rehome/warsaw-resting.jpg', altKey: 'rehome.photo_resting' },
+    { src: '/images/rehome/warsaw-on-bed.jpg', altKey: 'rehome.photo_on_bed' },
+    { src: '/images/rehome/warsaw-sitting.jpg', altKey: 'rehome.photo_sitting' },
+  ],
+};
