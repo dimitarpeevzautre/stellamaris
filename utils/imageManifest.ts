@@ -27,6 +27,10 @@ export const IMAGE_MANIFEST: Readonly<Record<string, ImageInfo>> = {
   "/images/gallery-story/portuguese-water-dogs-water-rescue-training.jpg": { width: 1032, height: 1055, widths: [480, 1032] },
   "/images/gallery-story/portuguese-water-dogs-with-child.jpg": { width: 608, height: 1080, widths: [480, 608] },
   "/images/puppies.jpg": { width: 1600, height: 1067, widths: [480, 960, 1600] },
+  "/images/rehome/warsaw-on-bed.jpg": { width: 900, height: 1600, widths: [480, 900] },
+  "/images/rehome/warsaw-resting.jpg": { width: 900, height: 1600, widths: [480, 900] },
+  "/images/rehome/warsaw-sitting.jpg": { width: 900, height: 1600, widths: [480, 900] },
+  "/images/rehome/warsaw-standing.jpg": { width: 1600, height: 1573, widths: [480, 960, 1600] },
   "/images/riva.jpg": { width: 1200, height: 1600, widths: [480, 720, 960, 1200] },
   "/images/steliandpuppy.jpg": { width: 640, height: 427, widths: [640] },
 };

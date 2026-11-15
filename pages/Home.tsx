@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Home as HomeIcon, ShieldCheck, PawPrint, Heart, ArrowRight, Facebook } from 'lucide-react';
+import { Home as HomeIcon, ShieldCheck, PawPrint, Heart, ArrowRight, Facebook, MapPin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import Picture from '../components/Picture';
-import { HOME_HERO_IMAGE, SOCIAL_FACEBOOK, TESTIMONIALS_BACKGROUND_IMAGE } from '../constants';
+import { HOME_HERO_IMAGE, REHOMING, REHOMING_PHOTO_SIZES, SOCIAL_FACEBOOK, TESTIMONIALS_BACKGROUND_IMAGE } from '../constants';
+
+const HeroTitle = REHOMING ? 'h2' : 'h1';
 
 const Home: React.FC = () => {
   const { t, path, language } = useLanguage();
@@ -48,6 +50,58 @@ const Home: React.FC = () => {
 
   return (
     <div className="bg-stella-cream">
+      {/* Rehoming appeal: first on the page until the dog has a home (REHOMING in constants.ts). */}
+      {REHOMING && (
+        <section id="rehome" aria-labelledby="rehome-title" className="scroll-mt-24 bg-stella-cream pt-6 pb-16 lg:pt-10 lg:pb-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+            <div>
+              <Picture
+                src={REHOMING.lead.src}
+                alt={t(REHOMING.lead.altKey)}
+                sizes={REHOMING_PHOTO_SIZES}
+                loading="eager"
+                fetchPriority="high"
+                pictureClassName="block"
+                className="w-full aspect-[4/3] sm:aspect-[3/2] lg:aspect-square object-cover object-[50%_62%] rounded-xl shadow-lg"
+              />
+              <div className="mt-3 grid grid-cols-3 gap-3">
+                {REHOMING.gallery.map((photo) => (
+                  <Picture
+                    key={photo.src}
+                    src={photo.src}
+                    alt={t(photo.altKey)}
+                    sizes="(min-width: 1024px) 190px, 31vw"
+                    pictureClassName="block"
+                    className="w-full aspect-square object-cover rounded-lg"
+                  />
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="inline-flex items-center gap-2 mb-5 px-4 py-2 bg-stella-gold/20 rounded-full text-sm font-semibold text-stella-dark">
+                <span className="w-2 h-2 rounded-full bg-stella-gold animate-pulse" aria-hidden="true"></span>
+                {t('rehome.label')}
+              </p>
+              <h1 id="rehome-title" className="text-4xl md:text-5xl font-serif leading-tight text-stella-dark mb-6">
+                {t('rehome.title')}
+              </h1>
+              <p className="flex items-center gap-2 mb-6 text-sm font-semibold text-slate-700">
+                <MapPin className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                {t('rehome.location')}
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4 max-w-xl">{t('rehome.p1')}</p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-xl">{t('rehome.p2')}</p>
+              <Link
+                to={path('contact', '?interest=rehome')}
+                className="bg-stella-gold hover:bg-[#b8952b] text-stella-dark font-sans text-xs font-bold tracking-widest py-4 px-10 uppercase text-center transition-all duration-300 inline-block shadow-lg"
+              >
+                {t('rehome.cta')}
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Hero Section */}
       <div className="on-dark relative min-h-[85vh] w-full overflow-hidden">
         {/* Hero photo: a real <img> so it is the LCP element and indexable. routes.ts preloads the
@@ -56,8 +110,8 @@ const Home: React.FC = () => {
           src={HOME_HERO_IMAGE.src}
           alt={t('home.hero_image_alt')}
           sizes={HOME_HERO_IMAGE.sizes}
-          loading="eager"
-          fetchPriority="high"
+          loading={REHOMING ? 'lazy' : 'eager'}
+          fetchPriority={REHOMING ? 'auto' : 'high'}
           pictureClassName="absolute inset-0 block"
           className="w-full h-full object-cover object-left md:object-center"
         />
@@ -74,9 +128,10 @@ const Home: React.FC = () => {
               <span className="text-xs font-bold tracking-[0.2em] uppercase text-white">{t('home.fci_registered')}</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-6 drop-shadow-lg whitespace-pre-line">
+            {/* One h1 per page: the kennel title steps down while the rehoming appeal leads. */}
+            <HeroTitle className="text-5xl md:text-7xl font-serif leading-tight mb-6 drop-shadow-lg whitespace-pre-line">
               {t('home.hero_title')}
-            </h1>
+            </HeroTitle>
             <p className="text-lg md:text-xl font-light mb-8 drop-shadow-md opacity-95 leading-relaxed max-w-2xl">
               {t('home.hero_desc')}
             </p>

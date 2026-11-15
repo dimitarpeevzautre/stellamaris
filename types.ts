@@ -95,6 +95,17 @@ export interface PuppyHome {
   lng: number;
 }
 
+/**
+ * A dog we bred that needs a new home. While REHOMING in constants.ts is set, the home page
+ * opens with the appeal, the announcement bar links to it and the contact form offers it as
+ * an interest. Texts live under `rehome` in utils/i18n/{en,bg}.ts.
+ */
+export interface Rehoming {
+  /** First photo: shown large; it is the home page's main image while the appeal is up. */
+  lead: Photo;
+  gallery: Photo[];
+}
+
 export interface AvailablePuppy {
   id: string;
   name: string;

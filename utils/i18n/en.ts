@@ -318,6 +318,22 @@ Riva is a true ambassador for her breed. Alongside her life at home, she works w
         reload: 'Reload page',
         contact: 'Contact us:'
     },
+    rehome: {
+        announcement: 'One of our puppies, now in Warsaw, is looking for a new home –',
+        announcement_link: 'meet him',
+        label: 'Looking for a new home',
+        title: 'Our boy in Warsaw needs a new family',
+        p1: 'One of the Portuguese Water Dogs we bred, a brown boy living in Warsaw, Poland, has to be rehomed. We are helping to find the right family for him.',
+        p2: 'If you could give him a home, or know someone who could, please write to us. We will tell you all about him and answer every question.',
+        cta: 'ASK ABOUT HIM',
+        location: 'Warsaw, Poland',
+        photo_standing: 'A brown Portuguese Water Dog standing in profile on a lawn, with Steli kneeling behind him',
+        photo_resting: 'Close-up of the brown Portuguese Water Dog resting his head on a grey cushion',
+        photo_on_bed: 'The brown Portuguese Water Dog lying on a bed with his front paws hanging over the edge',
+        photo_sitting: 'The brown Portuguese Water Dog sitting upright on a bed against a cushion',
+        interest_option: 'Rehoming: the boy in Warsaw',
+        message: 'Hello! I would like to know more about the boy in Warsaw who is looking for a new home.'
+    },
     carousel: {
         previous: 'Previous photo',
         next: 'Next photo',
