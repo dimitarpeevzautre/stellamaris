@@ -227,6 +227,8 @@ const bg: Translations = {
             vilnius: 'Вилнюс',
             poland: 'Полша',
             warsaw: 'Варшава',
+            finland: 'Финландия',
+            helsinki: 'Хелзинки',
             ukraine: 'Украйна',
             odesa: 'Одеса',
             puppy: 'кученце',

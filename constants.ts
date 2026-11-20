@@ -71,7 +71,7 @@ export const KENNEL = {
  * was last checked. Shown as "Last updated" on the Puppies page and used in the structured data.
  * Update it whenever you change any of those lists.
  */
-export const LITTERS_UPDATED = '2026-10-21';
+export const LITTERS_UPDATED = '2026-11-20';
 
 /** Date the FAQ answers (utils/faq.ts) were last reviewed. Shown on the FAQ page. */
 export const FAQ_UPDATED = '2026-10-04';
@@ -163,6 +163,7 @@ export const PUPPY_HOMES: PuppyHome[] = [
   { id: 'malaga', countryKey: 'spain', cityKey: 'malaga', count: 1, lat: 36.7213, lng: -4.4214 },
   { id: 'lithuania', countryKey: 'lithuania', cityKey: 'vilnius', count: 1, lat: 54.6872, lng: 25.2797 },
   { id: 'poland', countryKey: 'poland', cityKey: 'warsaw', count: 1, lat: 52.2297, lng: 21.0122 },
+  { id: 'finland', countryKey: 'finland', cityKey: 'helsinki', count: 1, lat: 60.1699, lng: 24.9384 },
   { id: 'ukraine', countryKey: 'ukraine', cityKey: 'odesa', count: 1, lat: 46.4825, lng: 30.7233 },
 ];
 

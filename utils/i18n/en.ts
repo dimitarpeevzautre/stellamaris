@@ -226,6 +226,8 @@ Riva is a true ambassador for her breed. Alongside her life at home, she works w
             vilnius: 'Vilnius',
             poland: 'Poland',
             warsaw: 'Warsaw',
+            finland: 'Finland',
+            helsinki: 'Helsinki',
             ukraine: 'Ukraine',
             odesa: 'Odesa',
             puppy: 'puppy',
